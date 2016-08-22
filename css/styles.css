@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    background-image: url(../img/back.jpg);
+    background-size: cover;
+}
+
+
+.app {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: visible;
+}
+
+.flare:hover {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+
+.multiply {
+    mix-blend-mode: multiply;
+}
+
+
+.overlay {
+    mix-blend-mode: overlay;
+}
+
+
+.pointer {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
