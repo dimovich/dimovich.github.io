@@ -1,0 +1,31 @@
+.main-title
+{
+  font-family : Essays1743 Italic;
+  font-style : italic;
+  font-size : 24px;
+  letter-spacing : 1.2px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+}
+
+
+.menu-item
+{
+  font-family : Essays1743;
+  font-size : 36px;
+  letter-spacing : 1.8px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+}
+
+
+.menu-desc
+{
+  font-family : Essays1743 Italic;
+  font-style : italic;
+  font-size : 24px;
+  letter-spacing : 1.2px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+}
+

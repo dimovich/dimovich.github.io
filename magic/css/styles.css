@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Essays-1743';
+    src:url('../fonts/Essays1743.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Essays-1743';
+    src:url('../fonts/Essays1743-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+html {
+    background:url(../img/background.jpg);
+    background-size: 100%;
+}
+
+body {
+    background-color: transparent;
+
+}
+
+.logo {
+    padding-top: 10px;
+}
+
+.menu {
+    padding-top: 25px;
+}
+
+.main-title
+{
+  font-family : Essays1743 Italic;
+  font-style : italic;
+  font-size : 24px;
+  letter-spacing : 1.2px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+}
+
+
+
+.menu-item-container {
+    padding-bottom: 30px;
+}
+
+.menu-item-container:hover .menu-img img {
+    /*    opacity: 0.7; */
+    transform: scale(1.1);
+    transition: all .1s ease-in-out;
+}
+
+
+.menu-img {
+    cursor: pointer;
+}
+
+.menu-item
+{
+    font-family : Essays1743;
+    font-size : 36px;
+    letter-spacing : 1.8px;
+    color : #231F20;
+    color : rgb(35, 31, 32);
+    cursor: pointer;
+}
+
+
+.menu-desc
+{
+    font-family : Essays1743 Italic;
+    font-style : italic;
+    font-size : 24px;
+    letter-spacing : 1.2px;
+    color : #231F20;
+    color : rgb(35, 31, 32);
+    width: 268px;
+    cursor: pointer;
+}
+
