@@ -90,7 +90,7 @@ body {
     font-family : Essays1743;
     font-size : 2.6em;
     letter-spacing : 1.8px;
-    color : #c21700;
+    color : black;/*#c21700;*/
     text-align: center;
     margin-top: 0.3em;
     margin-bottom: -0.3em;
@@ -103,7 +103,7 @@ body {
     font-style : italic;
     font-size : 1.8em;
     letter-spacing : 1.2px;
-    color : #c21700;
+    color : black;/*#c21700;*/
     text-align: center;
     margin-top: -0.5em;
 }
@@ -129,11 +129,6 @@ body {
 }
 
 
-
-.blend {
-    mix-blend-mode: overlay;
-}
-
 .contacts {
     margin-top: 3em;
 }
@@ -157,7 +152,7 @@ body {
     font-family : Essays1743;
     font-size : 1.2em;
     letter-spacing : 1.2px;
-    color : #c21700;
+    color : black;/*#c21700;*/
     opacity: 0.8;
     margin-bottom: -10px;
 }
@@ -172,4 +167,8 @@ body {
 
 .clickable:hover i {
     transform: scale(1.1);
+}
+
+.overlay {
+    mix-blend-mode: overlay;
 }
