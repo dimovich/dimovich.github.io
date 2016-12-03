@@ -3,6 +3,5 @@ $(window).on('load', function() {
 	lastRow : 'justify', 
 	rowHeight : 160, 
 	rel : 'gallery',
-	margins : 20
-    }).on('jg.complete', function () {$('.swipeboximg').swipebox();});
-});
+	margins : 10
+    }).on('jg.complete', function () {$('.swipeboximg').swipebox();});});

@@ -1,41 +1,44 @@
-var x = true;
+$(window).on('load', function() {
+    var x = true;
 
-function toggleham() {
-    var elem = document.getElementById("sidenav");
-    if (Boolean(x)) {
-	elem.style.pointerEvents = "auto";
-	elem.style.opacity = "1";
-    } else {
-	elem.style.opacity = "0";
-	elem.style.pointerEvents = "none";
+    $(document.body).click( function() {
+	closeHam();
+    });
+
+    $(document).keyup(function(e) {
+	if (e.keyCode == 27) { // escape key maps to keycode `27`
+	    closeHam();
+	}
+    });
+
+    $(window).scroll(function(){
+	closeHam();
+    });
+
+
+    function closeHam() {
+	if(!Boolean(x)) {
+	    x = !x;
+	    var elem = document.getElementById("sidenav");
+	    elem.style.opacity = "0";
+	    elem.style.pointerEvents = "none";
+	    $(".hambtn").toggleClass("is-active");
+	}
     }
-    x = !x;
-}
 
 
-/*
-//stop click propagation inside ham
-document.getElementById("ham").onclick = function (e) {
-  e = e || window.event;
-  e.cancelBubble = true;
-  if (e.stopPropagation)
-    e.stopPropagation();
-}
-*/
-
-
-/*
-function closeham() {
-    if (!Boolean(x)) {
+    $(".hambtn").click( function(e) {
+	e.stopPropagation(); // this stops the event from bubbling up to the body
 	var elem = document.getElementById("sidenav");
-	elem.style.opacity = "0";
-	elem.style.pointerEvents = "none";
+	if (Boolean(x)) {
+	    elem.style.pointerEvents = "auto";
+	    elem.style.opacity = "1";
+	} else {
+	    elem.style.opacity = "0";
+	    elem.style.pointerEvents = "none";
+	}
+	$(this).toggleClass("is-active");
 	x = !x;
-    }
-}
-
-
-document.addEventListener("click", function(){
-    closeham();
+    });
 });
-*/
+

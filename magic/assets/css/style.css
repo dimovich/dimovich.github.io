@@ -52,7 +52,9 @@ body {
     cursor: pointer;
 }
 
-
+.hover:hover {
+    opacity: 0.7;
+}
 
 .overlay {
     mix-blend-mode: overlay;
@@ -63,6 +65,9 @@ body {
 .centered {
     text-align: center;
     margin: auto;
+}
+
+.vcentered {
 }
 
 .content {
@@ -110,5 +115,11 @@ body {
 
 
 .vspace-full {
+    height: 100vh;
+    position: relative;
+}
+
+.vspace-fullm {
     min-height: 100vh;
+    position: relative;
 }
