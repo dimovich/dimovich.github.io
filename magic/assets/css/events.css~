@@ -1,0 +1,77 @@
+/* EVENTS PAGE */
+
+.events-main-title {
+  font-family : Essays1743;
+  font-size : 21px;
+  letter-spacing : 1.18px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.event-c {
+    padding-top: 20px;
+    text-align: justify;
+    border-style: solid;
+    border-width: 2px;
+    border-left:0;
+    border-right:0;
+    border-bottom:0;
+    border-image: url("../img/border01.png") 2 round;
+    border-image-repeat: repeat;
+
+}
+
+.event-title {
+  font-family : Essays1743;
+  font-size : 21px;
+  letter-spacing : 1.18px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+  mix-blend-mode: overlay;
+}
+
+
+.event-date {
+  font-family : Essays1743;
+  font-size : 21px;
+  letter-spacing : 1.18px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+}
+
+
+.event-text {
+  font-family : Essays1743;
+  font-style : italic;
+  font-size : 18px;
+  letter-spacing : 0.61px;
+  color : #000000;
+  color : rgb(0, 0, 0);
+}
+
+
+.eventa-title {
+  font-family : Essays1743;
+  font-size : 21px;
+  letter-spacing : 1.11px;
+  color : #000000;
+  color : rgb(0, 0, 0);
+}
+
+
+
+.pic-left {
+    float: left;
+    margin-right: 2em;
+    width: 300;
+    height: 260;
+}
+
+.pic-right {
+    float: right;
+    margin-left: 2em;
+    width: 300;
+    height: 260;
+}

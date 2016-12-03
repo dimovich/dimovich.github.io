@@ -1,0 +1,9 @@
+var x = true;
+function toggleham() {
+    if (Boolean(x)) {
+	document.getElementById("sidenav").style.width = "210px";
+    } else {
+	document.getElementById("sidenav").style.width = "0";
+    }
+    x = !x;
+}

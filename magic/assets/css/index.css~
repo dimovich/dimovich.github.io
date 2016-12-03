@@ -1,0 +1,301 @@
+/* INDEX PAGE */
+
+.vspace-section1 {
+  height: -webkit-calc(100vh - 200.6px);
+  height: -moz-calc(100vh - 200.6px);
+  height: calc(100vh - 200.6px);
+}
+
+
+.vcenter-section1 {
+    margin-top: calc((100vh - 200.6px) / 2 - 90px)
+}
+
+
+.top-logo-container {
+    height: 175.6px;
+    min-width: 649;
+    margin-top: 27.5px;
+    position: relative;
+}
+
+.top-border {
+    position:absolute;
+    top:0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    margin:auto;
+}
+
+.top-logo {
+    height: 85%;
+}
+
+.top-logo-motto {
+  font-family : Essays1743;
+  font-style : italic;
+  font-size : 23px;
+  color : #000000;
+  color : rgb(0, 0, 0);
+  opacity : 0.7;
+  margin-top: 5px;
+}
+
+
+.m-title {
+    font-family : Essays1743;
+    font-size : 21px;
+    letter-spacing : 1.18px;
+    color : #231F20;
+    color : rgb(35, 31, 32);
+    mix-blend-mode: overlay;
+    margin-bottom: 0.4em;
+}
+
+
+.clickable .m-title {
+    text-decoration: none;
+    position: relative;
+}
+
+.clickable .m-title:before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 2px;
+    bottom: 0;
+    left: 20px;
+    background-color: #000;
+    visibility: hidden;
+}
+
+.clickable:hover .m-title:before {
+  visibility: visible;
+}
+
+
+.m-text-container {
+    width: 242.309px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.m-text {
+  font-family : Essays1743;
+  font-style : italic;
+  font-size : 18px;
+  letter-spacing : 0.61px;
+  color : #000000;
+  color : rgb(0, 0, 0);
+  line-height: 1.1em;
+}
+
+.m-icon {
+    margin-bottom: 1.3em;
+}
+
+.section-title {
+  font-family : Essays1743;
+  font-size : 21px;
+  letter-spacing : 1.18px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+  mix-blend-mode: overlay;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+.section-text-container {
+    width: 242.309px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-text {
+  font-family : Essays1743;
+  font-style : italic;
+  font-size : 18px;
+  letter-spacing : 0.61px;
+  color : #000000;
+  color : rgb(0, 0, 0);
+  line-height: 1.1em;
+}
+
+
+.c-img-container {
+    width: 809px;
+    height: 238.32px;
+    border: 1px solid red;
+}
+
+.e-text-container {
+    width: 648px;
+}
+
+.e-text {
+    line-height: 1.3em;
+}
+
+
+.calendar-title {
+  font-family : Essays1743;
+  font-size : 21px;
+  letter-spacing : 1.18px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+  mix-blend-mode: overlay;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+
+.calendar-container {
+    max-width: 810px;
+    height: 280px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.calendar-month {
+  font-family : Essays1743;
+  font-size : 21px;
+  letter-spacing : 1.18px;
+  color : #231F20;
+  color : rgb(35, 31, 32); 
+  text-decoration : underline;
+}
+
+.month {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    font-size : 23px;
+}
+
+.month .prev {
+    float: left;
+    padding-left: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-right: 10px;
+}
+
+
+.calendar-day {
+  font-family : Essays1743;
+  font-size : 21px;
+  letter-spacing : 1.03px;
+  color : #020202;
+  color : rgb(2, 2, 2);
+}
+
+
+.calendar-day-c {
+    padding-right: 10px;
+    margin-left: -10px;
+}
+
+ul {
+    list-style-type: none;
+    -moz-column-count: 4;
+    -moz-column-gap: 2px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 2px;
+    column-count: 4;
+    column-gap: 2px;
+    padding: 0;
+}
+
+.calendar-day li {
+    list-style-type: none;
+    min-width: 25%;
+    text-align: right;
+    line-height: 1.05em;
+}
+
+.c-day-c {
+    width: 160px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 0.5em;
+    border-style: solid;
+    border-width: 1px;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+    border-image: url("../img/border01.png") 1;
+}
+
+
+
+.c-event {
+    font-family : Essays1743;
+    font-size : 13px;
+    letter-spacing : 0.41px;
+    color : #000000;
+    color : rgb(0, 0, 0);
+}
+
+
+.g-container {
+    width: 806px;
+    height: 415px;
+    border: 1px solid red;
+}
+
+
+.restaurant-title {
+  font-family : Essays1743;
+  font-size : 32px;
+  letter-spacing : 1.79px;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+}
+
+
+.r-motto-c {
+    margin-top: -0.8em;
+}
+
+.restaurant-motto {
+  font-family : Essays1743;
+  font-style : italic;
+  font-size : 21px;
+  color : #020202;
+  color : rgb(2, 2, 2);
+}
+
+
+.vcenter-section3 {
+    margin-top: 40px;
+}
+
+.vspace-contacts {
+    height: 100%;
+    /*height: 100vh;*/
+    padding-bottom: 150px;
+}
+
+.c-social-c {
+    width: 504px;
+    margin-top: 40px;
+}
+
+.contacts-c {
+    position: relative;
+}
+
+.contact-text
+{
+  font-family : Essays1743;
+  font-size : 18px;
+  letter-spacing : 0.61px;
+  color : #000000;
+  color : rgb(0, 0, 0);
+  margin-top: 10px;
+}
+
+
