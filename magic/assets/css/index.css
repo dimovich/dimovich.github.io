@@ -32,7 +32,8 @@
 
 /*contacts*/
 .vcenter-section5 {
-    padding-top: 40px;
+    padding-top: calc((100vh - 550px) / 2);
+    min-height: 550px;
 }
 
 .top-logo-container {
@@ -283,17 +284,21 @@ ul {
 }
 
 
+
+
+
 .restaurant-title {
   font-family : Essays1743;
   font-size : 32px;
   letter-spacing : 1.79px;
   color : #231F20;
   color : rgb(35, 31, 32);
-}
+p}
 
 
 .r-motto-c {
     margin-top: -0.8em;
+    margin-bottom: 40px;
 }
 
 .restaurant-motto {
@@ -304,13 +309,6 @@ ul {
   color : rgb(2, 2, 2);
 }
 
-
-
-
-.vspace-contacts {
-    /*height: 100vh;*/
-    padding-bottom: 150px;
-}
 
 .c-social-c {
     width: 504px;
@@ -330,5 +328,3 @@ ul {
   color : rgb(0, 0, 0);
   margin-top: 10px;
 }
-
-

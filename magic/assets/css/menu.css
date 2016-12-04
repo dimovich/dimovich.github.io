@@ -5,14 +5,18 @@
     min-width: 72px;
     position: absolute;
     overflow: auto;
-    margin-top: 45px;
-    padding-right: 20px;
-    padding-left: 30px;
+    text-align: center;
 }
 
 .menu-nav-item {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+}
+
+.vhcenter-menu {
+    padding-top: calc((100vh - 350px) / 2);
+    padding-left: calc((100vw - 970px) / 4 + 5px);
+    min-height: 350px;
 }
 
 .food, .beer, .drinks {
@@ -142,4 +146,9 @@
     margin-top: 130px;
     margin-bottom: 130px;
     height: 140px;
+}
+
+
+.clickable:hover {
+    mix-blend-mode: overlay;
 }
