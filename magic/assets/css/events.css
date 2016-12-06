@@ -23,6 +23,11 @@
     margin-bottom: 30px;
 }
 
+.event-c img {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
 .event-title {
   font-family : Essays1743;
   font-size : 21px;
@@ -64,8 +69,6 @@
 .pic-left, .pic-right {
     margin-bottom: 1em;
     margin-top: 2em;
-    border: 2px solid black;
-    border-radius: 5px;
 }
 
 .pic-left {

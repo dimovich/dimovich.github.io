@@ -1,5 +1,8 @@
 /*MENU PAGE*/
 
+.content {
+    padding: 0 72px;
+}
 
 .menu-nav {
     min-width: 72px;
@@ -71,12 +74,6 @@
     margin-bottom: 10px;
 }
 
-.menu-item-c {
-    width: 100%;
-    clear: both;
-    padding-bottom: 0.7em;
-}
-
 .menu-item-text {
   font-family : Essays1743;
   font-style : italic;
@@ -98,7 +95,7 @@
   color : rgb(0, 0, 0);
   text-align: justify;
   line-height: 1em;
-  margin-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 .menu-item-text3 {
@@ -111,19 +108,24 @@
   text-align: justify;
   line-height: 1em;
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 
-.250px {
-    max-width: 250px;
+
+.menu-item-c {
+    width: 100%;
+    padding-bottom: 0.7em;
+    clear: both;
 }
 
-.menu-item-left { 
-    float: left;
+
+.menu-item-left {
     margin: 0;
-    margin-right: 8px;
+    float: left;
+    margin-right: 0.5em;
 }
 
-.menu-item-middle { 
+.menu-item-middle {
     overflow: auto;
     border-style: solid;
     border-width: 1px;
@@ -133,22 +135,31 @@
     border-image: url("../img/border01.png") 1;
     border-image-repeat: repeat;
     padding-top: 1em;
-    margin: 0;
+    padding-right: 10px;
 }
 
-.menu-item-right { 
-    float: right;
+.menu-item-right {
     margin: 0;
-    margin-left: 10px;
+    float: right;
+    margin-left: 0.5em;
 }
 
 .menu-logo-bottom {
     margin-top: 130px;
     margin-bottom: 130px;
     height: 140px;
+    text-align: right;
 }
 
 
 .clickable:hover {
     mix-blend-mode: overlay;
+}
+
+
+/*Tablets*/
+@media screen and (max-width: 630px) {
+    .menu-item-middle {
+	width: 100%
+    }
 }
