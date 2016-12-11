@@ -1,0 +1,79 @@
+.g-container {
+    width:100%;
+    height: 420;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border-radius: 10px;
+}
+
+.g-container .image-wrap {
+    display: inline-block;
+    height: 200;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.g-container .border-wrap {
+    border: 3px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.g-container .image {
+    max-width: 323px;
+    max-height: 200px;
+    z-index: 1;
+}
+
+
+.g-container img {
+    height: 200px;
+}    
+
+.g-container div:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+a.gprev, a.gnext {
+    height:91px;
+    position:absolute;
+    width:43px;
+    top:50%;
+    margin-top:-30px;
+    opacity:0.6;
+    text-indent:-99999px;
+    cursor:pointer;
+    -webkit-transition:opacity 200ms ease-out;
+    z-index: 2;
+}
+
+a.gprev:hover,a.gnext:hover {
+	opacity:1;
+}
+.gprev {
+	left:0;
+	background: #000 url('../img/sprite.png') no-repeat -200px 25px;
+}
+.gnext {
+	right:0;
+	background: #000 url('../img/sprite.png') no-repeat -167px 25px;
+}
+
+.g-container .g-slider {
+    display: inline-block;
+    transition-property: margin-left;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+}
+
+.g-container .g-slider:hover {
+    opacity: 1;
+}
