@@ -1,3 +1,9 @@
+.debug {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 @font-face {
     font-family: 'Essays1743';
     src:url('../fonts/essays.woff');
@@ -9,6 +15,20 @@
     font-family: 'Essays1743';
     src:url('../fonts/essays-italic.woff');
     font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Essays1743';
+    src:url('../fonts/essays-bold.woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Essays1743';
+    src:url('../fonts/essays-bold-italic.woff');
+    font-weight: bold;
     font-style: italic;
 }
 
@@ -79,7 +99,8 @@ body {
 
 
 .vspace-full {
-    height: 100vh;
+    min-height: 100vh;
+    margin-bottom: 50px;
 }
 
 .vspace-fullm {
@@ -101,7 +122,7 @@ body {
 
 @media screen and (max-width: 900px) {
     .content {
-	min-width: 460px;
+/*	min-width: 460px;*/
 	padding: 0px 24px;
 	text-align: center;
 	margin: auto;

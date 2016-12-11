@@ -1,18 +1,24 @@
+.disabled {
+    pointer-events: none;
+    height: 0;
+}
+
 .ham-c {
     position: fixed;
-    z-index: 1;
     top: 0px;
     right: 10px;
     background-color: transparent;
     font-size: 12px;
+    z-index: 10;
 }
 
 .sidenav {
-    opacity: 0;
-    transition: 0.5s;
+    transition: 0.7s;
     padding-top: 0;
     width: 170px;
-    pointer-events: none;
+    z-index: 10;
+    transition-timing-function: ease;
+    opacity: 0;
 }
 
 .sidenav a {
@@ -32,10 +38,6 @@
     margin-bottom: 12px;
 }
 
-.disabled {
-    pointer-events: none;
-}
-
 .sidenav a:hover {
     text-decoration: underline;
 }
@@ -43,6 +45,7 @@
 .hambtn-c {
     margin-top: 15px;
     text-align: right;
+    z-index: 10;
 }
 
 
@@ -124,3 +127,11 @@
     top: 0;
     transform: rotate(-90deg);
     transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+
+
+  @media screen and (max-width: 400px) {
+      .sidenav div {
+	  font-family: Verdana, Geneva, sans-serif, times;
+      }
+  }

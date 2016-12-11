@@ -74,6 +74,12 @@
     margin-bottom: 10px;
 }
 
+.menu-item-c {
+    width: 100%;
+    clear: both;
+    padding-bottom: 0.7em;
+}
+
 .menu-item-text {
   font-family : Essays1743;
   font-style : italic;
@@ -95,7 +101,7 @@
   color : rgb(0, 0, 0);
   text-align: justify;
   line-height: 1em;
-  padding-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .menu-item-text3 {
@@ -108,24 +114,19 @@
   text-align: justify;
   line-height: 1em;
   margin-bottom: 0px;
-  margin-top: 0px;
 }
 
-
-.menu-item-c {
-    width: 100%;
-    padding-bottom: 0.7em;
-    clear: both;
+.250px {
+    max-width: 250px;
 }
 
-
-.menu-item-left {
-    margin: 0;
+.menu-item-left { 
     float: left;
-    margin-right: 0.5em;
+    margin: 0;
+    margin-right: 8px;
 }
 
-.menu-item-middle {
+.menu-item-middle { 
     overflow: auto;
     border-style: solid;
     border-width: 1px;
@@ -135,20 +136,19 @@
     border-image: url("../img/border01.png") 1;
     border-image-repeat: repeat;
     padding-top: 1em;
-    padding-right: 10px;
+    margin: 0;
 }
 
-.menu-item-right {
-    margin: 0;
+.menu-item-right { 
     float: right;
-    margin-left: 0.5em;
+    margin: 0;
+    margin-left: 10px;
 }
 
 .menu-logo-bottom {
     margin-top: 130px;
     margin-bottom: 130px;
     height: 140px;
-    text-align: right;
 }
 
 

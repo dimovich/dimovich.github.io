@@ -4,6 +4,7 @@
   height: -webkit-calc(100vh - 200.6px);
   height: -moz-calc(100vh - 200.6px);
   height: calc(100vh - 200.6px);
+  margin-bottom: 50px;
 }
 
 /*menu*/
@@ -14,14 +15,13 @@
 
 /*chi siamo*/
 .vcenter-section2 {
-    min-height: 555px;
     padding-top: calc((100vh - 555px) / 4);
 }
 
 /*events*/
 .vcenter-section3 {
     padding-top: calc((100vh - 560px) / 4);
-    min-height: 560px;
+
 }
 
 /*gallery*/
@@ -34,6 +34,7 @@
 .vcenter-section5 {
     padding-top: calc((100vh - 550px) / 4);
     min-height: 550px;
+    padding-bottom: 80px;
 }
 
 .top-logo-container {
@@ -41,6 +42,7 @@
     width: 649;
     margin-top: 27.5px;
     position: relative;
+    pointer-events:none;
 }
 
 .top-border {
@@ -58,7 +60,7 @@
 
 
 .top-logo-motto {
-  font-family : Essays1743;
+  font-family : Essays1743, Verdana, Geneva, sans-serif, times;
   font-style : italic;
   font-size : 23px;
   color : #000000;
@@ -68,7 +70,7 @@
 }
 
 .m-title {
-    font-family : Essays1743;
+    font-family : Essays1743, Verdana, Geneva, sans-serif, times;
     font-size : 21px;
     letter-spacing : 1.18px;
     color : #231F20;
@@ -106,13 +108,13 @@
 }
 
 .m-text {
-  font-family : Essays1743;
-  font-style : italic;
-  font-size : 18px;
-  letter-spacing : 0.61px;
-  color : #000000;
-  color : rgb(0, 0, 0);
-  line-height: 1.1em;
+    font-family : Essays1743, Verdana, Geneva, sans-serif, times;
+    font-style : italic;
+    font-size : 18px;
+    letter-spacing : 0.61px;
+    color : #000000;
+    color : rgb(0, 0, 0);
+    line-height: 1.1em;
 }
 
 .m-icon {
@@ -120,14 +122,16 @@
 }
 
 .section-title {
-  font-family : Essays1743;
-  font-size : 26px;
-  letter-spacing : 1.18px;
-  color : #231F20;
-  color : rgb(35, 31, 32);
-  mix-blend-mode: overlay;
-  padding-bottom: 40px;
-  padding-top: 20px;
+    font-family : Essays1743, Verdana, Geneva, sans-serif, times;
+    font-size : 26px;
+    font-weight: bold;
+    letter-spacing : 1.18px;
+    color : #231F20;
+    color : rgb(35, 31, 32);
+    mix-blend-mode: overlay;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 0;
 }
 
 .section-text-container {
@@ -137,13 +141,13 @@
 }
 
 .section-text {
-  font-family : Essays1743;
-  font-style : italic;
-  font-size : 18px;
-  letter-spacing : 0.61px;
-  color : #000000;
-  color : rgb(0, 0, 0);
-  line-height: 1.1em;
+    font-family : Essays1743, times;
+    font-style : italic;
+    font-size : 18px;
+    letter-spacing : 0.61px;
+    color : #000000;
+    color : rgb(0, 0, 0);
+    line-height: 1.1em;
 }
 
 
@@ -152,10 +156,15 @@
     margin-top: 40px;
 }
 
+.c-img-container img {
+    width: 100%;
+}
+
 .img-border {
     border: 2px solid black;
     border-radius: 5px;
 }
+
 
 .e-text {
     line-height: 1.3em;
@@ -163,7 +172,7 @@
 
 
 .calendar-title {
-  font-family : Essays1743;
+  font-family : Essays1743, times;
   font-size : 21px;
   letter-spacing : 1.18px;
   color : #231F20;
@@ -261,23 +270,8 @@ ul {
     letter-spacing : 0.41px;
     color : #000000;
     color : rgb(0, 0, 0);
+    text-decoration: none;
 }
-
-
-.g-container {
-    width: 100%;
-    height: 100%;
-}
-
-.g-container a {
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-.g-container a:hover {
-    opacity: 0.8;
-}
-
 
 
 
@@ -287,7 +281,7 @@ ul {
   letter-spacing : 1.79px;
   color : #231F20;
   color : rgb(35, 31, 32);
-p}
+}
 
 
 .r-motto-c {
@@ -364,15 +358,17 @@ p}
 
     /*menu*/
     .vcenter-section1 {
-	padding-top: calc((100vh - 642px) / 4);
-	min-height: 642px;
+	padding-top: 40px;
+    }
+
+    .vspace-section1 {
+	height: 100%;
     }
 
     /*others*/
     .vcenter-section2, .vcenter-section3, .vcenter-section4, .vcenter-section5 {
 	padding-top: 10px;
 	padding-bottom: 50px;
-	height: 100%;
     }
 
     .vspace-fullm, .vspace-full {
@@ -428,5 +424,36 @@ p}
     }
     .calendar-day li {
 	min-width: 50%;
+    }
+
+    .overlay, .m-title, .section-title, .calendar-title {
+	mix-blend-mode: normal;
+    }
+}
+
+
+/*2column events*/
+@media screen and (max-width: 460px) {
+    ul {
+	-moz-column-count: 1;
+	-webkit-column-count: 1;
+	column-count: 1;
+    }
+    .calendar-day li {
+	min-width: 100%;
+	text-align: left;
+    }
+    .calendar-day-c {
+	padding-left: 20px;
+	margin: 0;
+    }
+    .c-day-c {
+	position: absolute;
+	width: 200px;
+	margin-left: 15px;
+    }
+
+    .c-event {
+	text-decoration: none;
     }
 }
