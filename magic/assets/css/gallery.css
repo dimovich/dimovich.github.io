@@ -1,6 +1,6 @@
 .g-container {
     width:100%;
-    height: 420px;
+    height: 450px;
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
@@ -59,12 +59,12 @@ a.gprev:hover,a.gnext:hover {
 	opacity:1;
 }
 .gprev {
-	left:0;
-	background: #000 url('../img/sprite.png') no-repeat -200px 25px;
+    left:0;
+    background: #000 url('../img/sprite.png') no-repeat -200px 25px;
 }
 .gnext {
-	right:0;
-	background: #000 url('../img/sprite.png') no-repeat -167px 25px;
+    right:0;
+    background: #000 url('../img/sprite.png') no-repeat -167px 25px;
 }
 
 .g-slider {

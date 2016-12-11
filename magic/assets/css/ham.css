@@ -1,6 +1,7 @@
 .disabled {
     pointer-events: none;
-    height: 0;
+    height: 0px;
+    opacity: 0;
 }
 
 .ham-c {
@@ -18,7 +19,6 @@
     width: 170px;
     z-index: 10;
     transition-timing-function: ease;
-    opacity: 0;
 }
 
 .sidenav a {
