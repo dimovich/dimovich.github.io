@@ -42,7 +42,6 @@ html {
 }
 
 body {
-    background-color: transparent;
 }
 
 .clickable {
@@ -120,13 +119,33 @@ body {
 }
 
 
+.icon {
+    height: 100%;
+}
+
+
+.desktop {
+    display: auto;
+}
+
+.mobile {
+    display: none;
+}
+
+
 @media screen and (max-width: 900px) {
     .content {
-/*	min-width: 460px;*/
+	width: 100%;
 	padding: 0px 24px;
-	text-align: center;
-	margin: auto;
-	box-sizing: border-box;
-	padding-bottom: -60px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .desktop {
+	display: none;
+    }
+    .mobile {
+	display: inline;
     }
 }

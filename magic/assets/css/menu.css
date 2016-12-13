@@ -1,25 +1,41 @@
 /*MENU PAGE*/
 
 .content {
-    padding: 0 72px;
+    margin-top: 50px;
 }
+
 
 .menu-nav {
-    min-width: 72px;
-    position: absolute;
-    overflow: auto;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 10px;
+    background:url(../img/background.jpg);
+    background-size: 100%;
+    z-index: 9;
+    border-bottom: 1px solid black;
     text-align: center;
+    padding-bottom: 10px;
 }
+
 
 .menu-nav-item {
+    display: inline-block;
+    box-sizing: border-box;
     position: relative;
-    margin-bottom: 70px;
+    height: 100%;
+    width: 18%;
+    text-align: center;
+    z-index: 11;
 }
 
+
 .vhcenter-menu {
-    padding-top: calc((100vh - 350px) / 2);
-    padding-left: calc((100vw - 970px) / 4 + 5px);
-    min-height: 350px;
+    padding: 0;
 }
 
 .food, .beer, .drinks {
@@ -161,5 +177,38 @@
 @media screen and (max-width: 630px) {
     .menu-item-middle {
 	width: 100%
+    }
+    .content {
+	padding: 0px 10px;
+    }
+    .menu-nav {
+	text-align: left;
+    }
+
+    .menu-nav-item {
+	width: 25%;
+    }
+}
+
+
+@media screen and (min-width: 10000px) {
+    .menu-nav {
+	min-width: 72px;
+	position: absolute;
+	overflow: auto;
+	text-align: center;
+    }
+
+    .menu-nav-item {
+	position: relative;
+	margin-bottom: 70px;
+	width: 50px;
+	height: 50px;
+    }
+
+    .vhcenter-menu {
+	padding-top: calc((100vh - 350px) / 2);
+	padding-left: calc((100vw - 970px) / 4 + 5px);
+	min-height: 350px;
     }
 }

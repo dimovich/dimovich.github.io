@@ -6,6 +6,7 @@
     white-space: nowrap;
     position: relative;
     border-radius: 10px;
+    padding-top: 20px;
 }
 
 .g-container .image-wrap {
@@ -43,11 +44,11 @@
 
 
 a.gprev, a.gnext {
-    height: 91px;
+    height: 100px;
     position:absolute;
     width:43px;
     top:50%;
-    margin-top:-30px;
+    margin-top:-60px;
     opacity:0.6;
     text-indent:-99999px;
     cursor:pointer;
