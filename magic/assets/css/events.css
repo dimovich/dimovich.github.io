@@ -1,5 +1,13 @@
 /* EVENTS PAGE */
 
+html {
+    background:url(../img/background1.jpg);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    overflow-x: hidden;
+}
+
+
 .events-main-title {
   font-family : Essays1743;
   font-size : 21px;
