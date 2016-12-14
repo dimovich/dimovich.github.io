@@ -149,3 +149,10 @@ body {
 	display: inline;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .overlay {
+	mix-blend-mode: normal;
+	color: rgb(184,86,2);
+    }
+}

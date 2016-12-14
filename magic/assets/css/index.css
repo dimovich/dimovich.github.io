@@ -26,14 +26,14 @@
 
 /*gallery*/
 .vcenter-section4 {
-    padding-top: calc((100vh - 670px) / 4);
-    min-height: 670px;
+    padding-top: calc((100vh - 770px) / 4);
+    min-height: 770px;
 }
 
 /*contacts*/
 .vcenter-section5 {
-    padding-top: calc((100vh - 550px) / 4);
-    min-height: 550px;
+    padding-top: calc((100vh - 690px) / 2);
+    min-height: 690px;
     padding-bottom: 80px;
 }
 
@@ -342,6 +342,7 @@ ul {
 .ttr {
     width: 33%;
     display: inline-block;
+    vertical-align: top;
 }
 
 
@@ -435,7 +436,7 @@ ul {
 	min-width: 50%;
     }
 
-    .overlay, .m-title, .section-title, .calendar-title {
+    .m-title, .section-title, .calendar-title {
 	mix-blend-mode: normal;
 	color: rgb(184,86,2);
     }
