@@ -1,42 +1,52 @@
 /*MENU PAGE*/
 
+
 .content {
     margin-top: 50px;
 }
 
 .spacer {
     width: 100%;
-    height: 1em;
+    height: 0;
 }
 
 .menu-nav {
-    width: 100%;
-    height: 50px;
+    width: 72px;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    overflow: auto;
+    text-align: right;
+    vertical-align: center;
+    top: 20vh;
+    left: calc((100vw - 970px) / 4 + 5px);
     overflow: hidden;
-    text-align: left;
-    background:url(../img/background.jpg);
-    background-size: 100%;
     z-index: 9;
-/*    border-bottom: 1px solid black;*/
-    text-align: center;
-    box-sizing: border-box;
+    background-color: transparent;
 }
 
 
 .menu-nav-item {
-    display: inline-block;
-    box-sizing: border-box;
-    position: relative;
-    height: 90%;
-    width: 18%;
-    text-align: center;
+    display: block;
+    height: 20vh;
+    min-height: 50px;
+    width: 100%;
+    vertical-align: center;
+    text-align: left;
     z-index: 11;
+    box-sizing: border-box;
 }
 
-.is-active {
+
+.menu-nav-item img {
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.menu-nav-item a {
+    outline: none;
+}
+
+.menu-nav-item .is-active {
+    filter: grayscale(0%);
 }
 
 
@@ -174,10 +184,19 @@
 }
 
 
-.clickable:hover {
-    mix-blend-mode: overlay;
+a:hover img {
+    filter: grayscale(0%);
 }
 
+
+@media screen and (max-width: 970px) {
+    .menu-nav {
+	left: 10px;
+    }
+    .content {
+	padding-left: 70px;
+    }
+}
 
 /*Tablets*/
 @media screen and (max-width: 630px) {
@@ -187,31 +206,40 @@
     .content {
 	padding: 0px 10px;
     }
+
     .menu-nav {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
 	text-align: left;
+	background:url(../img/background.jpg);
+	background-size: 100%;
     }
 
     .menu-nav-item {
+	display: inline-block;
+	box-sizing: border-box;
+	position: relative;
+	height: 90%;
 	width: 25%;
+	text-align: center;
+    }
+
+    .menu-nav-item img {
+	height: 100%;
+    }
+
+    .spacer {
+	width: 100%;
+	height: 2em;
     }
 }
 
 
 @media screen and (min-width: 10000px) {
-    .menu-nav {
-	min-width: 72px;
-	position: absolute;
-	overflow: auto;
-	text-align: center;
-    }
-
-    .menu-nav-item {
-	position: relative;
-	margin-bottom: 70px;
-	width: 50px;
-	height: 50px;
-    }
-
     .vhcenter-menu {
 	padding-top: calc((100vh - 350px) / 2);
 	padding-left: calc((100vw - 970px) / 4 + 5px);
