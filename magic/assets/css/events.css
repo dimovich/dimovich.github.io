@@ -1,45 +1,40 @@
 /* EVENTS PAGE */
 
-html {
-    background:url(../img/background1.jpg);
-}
-
 .events-main-title {
-  font-family : Essays1743;
-  font-size : 21px;
-  letter-spacing : 1.18px;
-  color : #231F20;
-  color : rgb(35, 31, 32);
-  margin-bottom: 50px;
-  margin-top: 50px;
+    font-family : Essays1743;
+    font-size : 26px;
+    font-weight: bold;
+    letter-spacing : 1.18px;
+    color : #231F20;
+    color : rgb(35, 31, 32);
+    margin-bottom: 60px;
+    margin-top: 30px;
 }
 
 .event-c {
-    padding-top: 10px;
     text-align: justify;
     border-style: solid;
     border-width: 2px;
     border-left:0;
     border-right:0;
     border-bottom:0;
-    border-image: url("../img/border01.png") 2 round;
+    border-image: url("../img/border01.png") 3 round;
     border-image-repeat: repeat;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .event-c img {
     border: 3px solid black;
     border-radius: 5px;
-    margin: 10px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .event-title {
   font-family : Essays1743;
+  font-style : italic;
   font-size : 25px;
   letter-spacing : 1.18px;
-  padding-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 
@@ -49,6 +44,8 @@ html {
   letter-spacing : 1.18px;
   color : #231F20;
   color : rgb(35, 31, 32);
+  margin: 0;
+  padding-top: 1em;
 }
 
 
@@ -73,7 +70,7 @@ html {
 
 .pic-left, .pic-right {
     margin: 1em;
-    margin-top: 4.6em;
+    margin-top: 5em;
     
 }
 
@@ -85,7 +82,7 @@ html {
 
 .pic-right {
     float: right;
-    margin-left: 1em;
+    margin-left: 2em;
 }
 
 
