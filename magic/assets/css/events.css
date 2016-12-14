@@ -1,5 +1,9 @@
 /* EVENTS PAGE */
 
+html {
+    background:url(../img/background1.jpg);
+}
+
 .events-main-title {
   font-family : Essays1743;
   font-size : 21px;
