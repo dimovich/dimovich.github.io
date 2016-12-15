@@ -37,7 +37,7 @@
 
 
 .menu-nav-item img {
-    filter: grayscale(100%);
+    filter: grayscale(75%);
     height: 50px;
 }
 

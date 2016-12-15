@@ -226,6 +226,16 @@
     padding-right: 10px;
 }
 
+.month a {
+    text-decoration: none;
+    color: black;
+    font-size: 33px;
+}
+
+.month a:hover {
+    outline: none;
+    font-size: 35px;
+}
 
 .calendar-day {
   font-family : Essays1743;
@@ -278,6 +288,7 @@ ul {
 .c-event {
     font-family : Essays1743;
     font-size : 11px;
+    font-weight: bold;
     letter-spacing : 0.41px;
     color : #000000;
     color : rgb(0, 0, 0);
@@ -319,6 +330,7 @@ ul {
 }
 
 .s-icon {
+    display: block;
     height: 80px;
     box-sizing: border-box;
     margin-bottom: 0.8em;
@@ -436,7 +448,7 @@ ul {
 	min-width: 50%;
     }
 
-    .m-title, .section-title, .calendar-title {
+    .m-title, .section-title, .calendar-title, .c-event {
 	mix-blend-mode: normal;
 	color: rgb(184,86,2);
     }
@@ -468,9 +480,5 @@ ul {
 	width: 200px;
 	margin-left: 15px;
 	height: 1em;
-    }
-
-    .c-event {
-	text-decoration: none;
     }
 }
