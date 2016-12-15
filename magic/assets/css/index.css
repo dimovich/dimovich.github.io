@@ -26,8 +26,7 @@
 
 /*gallery*/
 .vcenter-section4 {
-    padding-top: calc((100vh - 770px) / 4);
-    min-height: 770px;
+    padding-top: calc((100vh - 660px) / 4);
 }
 
 /*contacts*/
@@ -230,11 +229,11 @@
     text-decoration: none;
     color: black;
     font-size: 33px;
+    outline: none;
 }
 
 .month a:hover {
-    outline: none;
-    font-size: 35px;
+    color: rgb(184,86,2);
 }
 
 .calendar-day {
