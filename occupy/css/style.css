@@ -1,4 +1,3 @@
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -21,11 +20,19 @@ body {
 .fb-wrap {
 }
 
+.docs-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    
+}
+
 
 .occupy-grid {
     margin-bottom: 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
     grid-gap: 1.5rem;
 }
 
