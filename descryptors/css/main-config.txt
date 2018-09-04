@@ -1,0 +1,10 @@
+body,html font-size : 16px
+
+toolbar item height: 16px/default lineheight + padding: 5px 0 3px 0 = 24px
+
+controversial grid breakpoints
+@media (max-width: 1644px)
+@media (max-width: 1373px)
+@media (max-width: 1102px)
+@media (max-width: 831px)
+@media (max-width: 560px)
