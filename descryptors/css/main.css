@@ -541,3 +541,35 @@ a:hover {
     bottom: 3.25rem;
     color: var(--white);
 }
+
+
+
+.search-toolbar {
+    z-index: 2;
+    display: flex;
+    align-items: right;
+    flex-wrap: wrap;
+    min-height: 2rem;
+    justify-content: center;
+    /*border: 1px solid red;*/
+}
+
+.search-toolbar__item {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: GothamRegular, sans-serif;
+}
+
+.search-toolbar__item.switch--union {
+    background-image: url(../img/plus.svg);
+    background-size: cover;
+}
+
+
+.search-toolbar__item.switch--intersection {
+    background-image: url(../img/plus.svg);
+    background-size: cover;
+}
+
