@@ -552,16 +552,14 @@ a:hover {
 .search-toolbar {
     z-index: 2;
     display: flex;
-    align-items: right;
     flex-wrap: wrap;
     height: 2rem;
-    justify-content: center;
+    justify-content: flex-end;
     margin-bottom: 10px;
    /* border: 1px solid red;*/
 }
 
 .search-toolbar__item {
-    margin-right: 1rem;
     font-family: GothamRegular, sans-serif;
     width: 3.06rem;
     height: 2rem;
