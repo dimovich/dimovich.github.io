@@ -247,6 +247,10 @@ a:hover {
     grid-column: span 2;
 }
 
+.descryptor-full li h1 {
+    color: var(--dark);
+}
+
 /* upper part */
 .tags-wrapper {
     padding-bottom: 0.7rem;
@@ -254,6 +258,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+    color: var(--dark);
 }
 
 .tags-wrapper:empty {
@@ -549,27 +554,26 @@ a:hover {
     display: flex;
     align-items: right;
     flex-wrap: wrap;
-    min-height: 2rem;
+    height: 2rem;
     justify-content: center;
-    /*border: 1px solid red;*/
+    margin-bottom: 10px;
+   /* border: 1px solid red;*/
 }
 
 .search-toolbar__item {
     margin-right: 1rem;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
     font-family: GothamRegular, sans-serif;
-}
-
-.search-toolbar__item.switch--union {
-    background-image: url(../img/plus.svg);
+    width: 3.06rem;
+    height: 2rem;
     background-size: cover;
 }
 
-
-.search-toolbar__item.switch--intersection {
-    background-image: url(../img/plus.svg);
-    background-size: cover;
+.search-union {
+    background-image: url(../img/search-union.svg);
 }
+
+.search-intersection {
+    background-image: url(../img/search-intersection.svg);
+}
+
 
