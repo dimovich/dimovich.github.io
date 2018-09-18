@@ -27,6 +27,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Pixelmix';
+    src: url('../fonts/Pixelmix.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* //////////////////////// */
 /*ATOMIC CLASSES */
 .inverted {
@@ -372,7 +380,7 @@ a:hover {
 
 .descryptor .bottom-part h3 {
     white-space: nowrap;
-    overflow: hidden;
+    /*overflow: hidden;*/
     text-overflow: ellipsis;
 }
 
@@ -625,3 +633,14 @@ a:hover {
 }
 
 
+.descryptor__rating {
+    display: inline-block;
+    /*font-size: 0;*/
+   /* width: 0;*/
+    font-family: Pixelmix;
+    font-size: 0.5rem;
+    overflow: visible;
+    width: 0;
+    margin-left: 0.2rem;
+    transform: translateY(-0.5rem);
+}
