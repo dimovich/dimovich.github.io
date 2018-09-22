@@ -34,7 +34,6 @@
     font-style: normal;
 }
 
-
 /* //////////////////////// */
 /*ATOMIC CLASSES */
 .inverted {
@@ -154,20 +153,13 @@ a:hover {
     height: 39px;
     position: relative;
 }
-#logo__container{
+
+#logo__container {
     display: block;
     width: 175px;
     position: absolute;
 }
-@media(max-width: 1150px){
-    .logo-wrapper {
-        width: 25px;
-        overflow: hidden;
-    }
-    .logo__text{
-        display: none;
-    }
-}
+
 /* logo header */
 .header .logo__text {
     fill: var(--dark)
@@ -291,12 +283,6 @@ a:hover {
     padding: 0;
 }
 
-@media (max-width: 800px) {
-    .descryptor-full ul {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 .descryptor-full li:nth-child(1) {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
@@ -380,7 +366,6 @@ a:hover {
 
 .descryptor .bottom-part h3 {
     white-space: nowrap;
-    /*overflow: hidden;*/
     text-overflow: ellipsis;
 }
 
@@ -528,6 +513,12 @@ a:hover {
 }
 
 /* search card */
+.checkbox {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}
+
 .loader-icon, .search-icon {
     background-color: var(--blue);
     cursor: text;
@@ -537,7 +528,7 @@ a:hover {
     padding-bottom: 6rem;
     background-size: 4rem;
     background-repeat: no-repeat;
-    background-position: right 2rem bottom 2rem;
+    background-position: right 1.9rem bottom 1.9rem;
     caret-color: #fff;
 }
 
@@ -564,11 +555,12 @@ a:hover {
     outline: none;
     border: 0;
     background-color: transparent;
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     font-family: 'GothamRegular', sans-serif;
     color: var(--gray);
     caret-color: var(--gray);
-    margin-bottom: 1rem;
+    margin: 1.2rem auto 1.5rem auto;
+    max-width: 100%;
 }
 
 .search-tag {
@@ -612,7 +604,6 @@ a:hover {
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
-    height: 2rem;
     justify-content: flex-end;
     margin-bottom: 10px;
 }
@@ -632,15 +623,104 @@ a:hover {
     background-image: url(../img/search-intersection.svg);
 }
 
-
 .descryptor__rating {
     display: inline-block;
-    /*font-size: 0;*/
-   /* width: 0;*/
     font-family: Pixelmix;
     font-size: 0.5rem;
     overflow: visible;
     width: 0;
     margin-left: 0.2rem;
     transform: translateY(-0.5rem);
+}
+
+/* //////////////////////// */
+/*MEDIA*/
+@media (max-width: 800px) {
+    .descryptor-full ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 991px) {
+    .logo-wrapper {
+        width: 30px;
+        overflow: hidden;
+        transform: translateY(3px);
+    }
+
+    .logo__text {
+        display: none;
+    }
+
+    #logo__container {
+        width: 250px !important
+    }
+}
+
+@media (max-width: 576px) {
+    .search-box > *:not(.search-input-field):not(.radio) {
+        display: none;
+    }
+
+    .search-box {
+        display: flex;
+        align-items: center;
+        height: 125px;
+        transition: .1s ease all;
+    }
+
+    .search-input-field {
+        padding-left: 30px;
+        margin: 0;
+        max-width: 70%;
+        transition: .1s ease all;
+    }
+
+    .search-icon {
+        padding: 0;
+        overflow: hidden;
+        transition: .1s ease all;
+    }
+
+    .checkbox-label {
+        background: #fff;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute;
+        left: -10%;
+        top: -40%;
+        transition: .1s ease all;
+    }
+    .checkbox:checked + .checkbox-label{
+        background: var(--green);
+        width: 30px;
+        height: 30px;
+        left: 2rem;
+        top: 2.15rem;
+    }
+    .checkbox:checked ~ .search-box > *:not(.search-input-field) {
+        display: block;
+    }
+
+    .checkbox:checked ~ .search-box {
+        display: block;
+        padding: 2rem 2rem 2rem 2rem;
+        height: auto;
+    }
+
+    .checkbox:checked ~ .search-box .search-toolbar {
+        display: flex !important;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-right: 10px;
+    }
+    .checkbox:checked ~ .search-box .search-input-field {
+        padding-left: 0;
+        margin: 2rem auto 3rem auto;
+        max-width: 100%;
+    }
+
+
 }

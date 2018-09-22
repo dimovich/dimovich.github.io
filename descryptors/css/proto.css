@@ -1,3 +1,5 @@
+/* //////////////////////// */
+/*TOOLBAR*/
 .toolbar {
     z-index: 2;
     display: flex;
@@ -14,20 +16,16 @@
     display: flex;
     align-items: center;
     font-size: 1rem;
-    user-select: none;
-    font-family: GothamRegular, sans-serif;
     margin-top: 15px;
 }
-.toolbar__dropdown-wrapper,
-.toolbar__filter{
-    margin-top: 0;
-}
+
+
 .toolbar__item:last-child {
     margin-right: 0;
 }
 
 .toolbar__dropdown,
-.toolbar__link {
+.toolbar__filter {
     cursor: pointer;
     display: flex;
     background: white;
@@ -35,27 +33,37 @@
     line-height: 25px;
 }
 
-.toolbar__link {
+/*FILTER*/
+.toolbar__filter-container{
+    display: flex;
+    align-items: center;
+}
+.toolbar__filter {
     border-radius: 16px;
     text-decoration: none;
     padding: 0 20px;
     align-items: center;
+    margin-right: 10px;
 }
-
-.toolbar__link:visited {
+.toolbar__filter:last-child{
+    margin-right: 0
+}
+.toolbar__filter:visited {
     color: var(--gray-dark);
 }
 
-.toolbar__link--active {
+.toolbar__filter--active {
     background: var(--blue);
     color: var(--white);
 }
 
+/*LABEL*/
 .toolbar__label {
     width: auto;
     margin-right: 10px;
 }
 
+/*DROPDOWN*/
 .toolbar__dropdown {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -112,25 +120,80 @@
     background: var(--blue);
     color: var(--white);
 }
-.toolbar__item.break--vertical{
+
+/*BREAK*/
+.toolbar__item.break--vertical {
     margin: 0 28px 0 19px;
 }
-.toolbar__item.break--horizontal{
+
+.toolbar__item.break--horizontal {
     margin: 0 25px 0 7px;
 }
 
-@media (max-width: 1250px){
-    .toolbar__item.break{
+/*MEDIA*/
+@media (max-width: 1250px) {
+    .toolbar__item.break {
         display: none;
     }
 }
-@media (max-width: 1150px){
-    .toolbar{
-        /*justify-content: flex-start;*/
-    }
-    .toolbar__filter{
+
+@media (max-width: 1200px) {
+    .toolbar__filter-wrapper {
         width: 100%;
-        display: flex;
         justify-content: center;
+        display: flex;
     }
+    .toolbar__filter-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .toolbar__dropdown {
+        padding-right: 30px
+    }
+}
+
+@media (max-width: 776px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .toolbar {
+        order: 2;
+        margin-top: 20px;
+        padding: 0;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .toolbar__filter-wrapper:before,
+    .toolbar__filter-wrapper:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+    }
+
+    .toolbar__filter-wrapper:before {
+        margin-bottom: 35px;
+    }
+
+    .toolbar__filter-wrapper:after {
+        margin-top: 35px;
+        margin-bottom: 10px;
+    }
+
+    .toolbar__filter-wrapper {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+
+    .toolbar__label--filter {
+        /*display: none;*/
+    }
+
 }
