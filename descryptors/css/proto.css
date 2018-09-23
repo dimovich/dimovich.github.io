@@ -37,6 +37,11 @@
 .toolbar__filter-container{
     display: flex;
     align-items: center;
+    margin-top: -15px;
+}
+.toolbar__filter-container > *{
+    margin-top: 15px;
+
 }
 .toolbar__filter {
     border-radius: 16px;
@@ -56,10 +61,13 @@
     background: var(--blue);
     color: var(--white);
 }
+.toolbar__label--filter {
+    display: inline-block;
+}
 
 /*LABEL*/
 .toolbar__label {
-    width: auto;
+    width: 63px;
     margin-right: 10px;
 }
 
@@ -72,8 +80,7 @@
     border: none;
     position: relative;
     width: auto;
-    padding-right: 60px;
-    min-width: 75px;
+    width: 135px;
     cursor: pointer;
     user-select: none;
     background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="48" viewBox="0 0 48 48"><path d="M14 20l10 10 10-10z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>') no-repeat calc(100% - 7px) 51%;
@@ -130,10 +137,21 @@
     margin: 0 25px 0 7px;
 }
 
+/*ICON*/
+.icon--info{
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
 /*MEDIA*/
-@media (max-width: 1250px) {
+@media (max-width: 1270px) {
     .toolbar__item.break {
         display: none;
+    }
+    .toolbar__filter-container{
+        margin-right: 15px
     }
 }
 
@@ -147,10 +165,11 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        margin-right: 0;
     }
 
     .toolbar__dropdown {
-        padding-right: 30px
+        width: 105px;
     }
 }
 
