@@ -1,0 +1,596 @@
+TRACE t7896: (figwheel.main/-main "-b" "dev" ...)
+TRACE t7897: | (figwheel.main/get-edn-file-key "figwheel-main.edn" :log-level)
+TRACE t7898: | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :log-level ...)
+TRACE t7898: | | => nil
+TRACE t7897: | => nil
+TRACE t7899: | (figwheel.main/fix-simple-bool-args # #)
+TRACE t7899: | => ("-b" "dev" "-r")
+TRACE t7900: | (figwheel.main/validate-cli! #)
+TRACE t7901: | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-cli ...)
+TRACE t7901: | | => true
+TRACE t7902: | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :ansi-color-output ...)
+TRACE t7902: | | => true
+TRACE t7900: | => nil
+TRACE t7903: | (figwheel.repl/repl-env* nil)
+TRACE t7903: | => #figwheel.repl.FigwheelReplEnv{:bound-printer #object[clojure.lang.Atom 0x556d8c78 #], :broadcast false, :out-print-fn nil, ...}
+TRACE t7904: | (cljs.repl/repl-options #figwheel.repl.FigwheelReplEnv#)
+TRACE t7904: | => {:preloads #, :cljs.cli/commands #, :cljs.cli/main #object[clojure.tools.trace$trace_var_STAR_$fn__329$tracing_wrapper__330 0x395065af "clojure.tools.trace$trace_var_STAR_$fn__329$tracing_wrapper__330@395065af"]}
+TRACE t7905: | (figwheel.main/build-opt # "dev")
+TRACE t7906: | | (figwheel.main/get-build-with-error "dev")
+TRACE t7907: | | | (figwheel.main/get-build "dev")
+TRACE t7908: | | | | (figwheel.main/load-edn-opts "dev.cljs.edn")
+TRACE t7909: | | | | | (figwheel.main/read-edn-opts "dev.cljs.edn")
+TRACE t7910: | | | | | | (figwheel.main/read-edn-file #object[java.io.File 0xb1fccca "dev.cljs.edn"])
+TRACE t7910: | | | | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7909: | | | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7911: | | | | | (figwheel.main/merge-meta # #)
+TRACE t7911: | | | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7908: | | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7912: | | | | (figwheel.main/validate-config! :figwheel.main.schema.config/edn # ...)
+TRACE t7913: | | | | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-config)
+TRACE t7914: | | | | | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-config ...)
+TRACE t7914: | | | | | | => nil
+TRACE t7913: | | | | | => nil
+TRACE t7912: | | | | => nil
+TRACE t7915: | | | | (figwheel.main/validate-config! :figwheel.main.schema.cljs-options/cljs-options # ...)
+TRACE t7916: | | | | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-config)
+TRACE t7917: | | | | | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-config ...)
+TRACE t7917: | | | | | | => nil
+TRACE t7916: | | | | | => nil
+TRACE t7915: | | | | => nil
+TRACE t7907: | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7906: | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7905: | => {:options #, :figwheel.main/build #}
+TRACE t7918: | (figwheel.main/default-compile #'cljs.repl.figwheel/repl-env #)
+TRACE t7919: | | (figwheel.main/update-config #)
+TRACE t7920: | | | (figwheel.main/config-compile-is-build-once #)
+TRACE t7920: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7921: | | | (figwheel.main/config-figwheel-main-edn #)
+TRACE t7922: | | | | (figwheel.main/fetch-figwheel-main-edn #)
+TRACE t7922: | | | | => nil
+TRACE t7923: | | | | (figwheel.main/process-figwheel-main-edn nil)
+TRACE t7923: | | | | => nil
+TRACE t7921: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7924: | | | (figwheel.main/config-merge-current-build-conf #)
+TRACE t7925: | | | | (figwheel.main/process-main-config #)
+TRACE t7926: | | | | | (figwheel.main/resolve-ring-handler nil)
+TRACE t7927: | | | | | | (figwheel.main/resolve-fn-var "ring-handler" nil)
+TRACE t7927: | | | | | | => nil
+TRACE t7926: | | | | | => nil
+TRACE t7925: | | | | => {:watch-dirs #}
+TRACE t7928: | | | | (figwheel.main/extra-config-merge # nil)
+TRACE t7928: | | | | => {:watch-dirs #}
+TRACE t7924: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7929: | | | (figwheel.main/config-ansi-color-output! #)
+TRACE t7929: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7930: | | | (figwheel.main/config-set-log-level! #)
+TRACE t7930: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7931: | | | (figwheel.main/config-log-syntax-error-style! #)
+TRACE t7931: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7932: | | | (figwheel.main/config-repl-serve? #)
+TRACE t7932: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7933: | | | (figwheel.main/config-main-ns #)
+TRACE t7933: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7934: | | | (figwheel.main/config-main-source-path-on-classpath #)
+TRACE t7934: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7935: | | | (figwheel.main/config-update-watch-dirs #)
+TRACE t7935: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7936: | | | (figwheel.main/config-ensure-watch-dirs-on-classpath #)
+TRACE t7936: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7937: | | | (figwheel.main/config-figwheel-mode? #)
+TRACE t7938: | | | | (figwheel.main/figwheel-mode? #)
+TRACE t7938: | | | | => true
+TRACE t7937: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7939: | | | (figwheel.main/config-default-dirs #)
+TRACE t7939: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7940: | | | (figwheel.main/config-default-asset-path #)
+TRACE t7940: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7941: | | | (figwheel.main/config-default-aot-cache-false #)
+TRACE t7941: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7942: | | | (figwheel.main/config-pre-post-hooks #)
+TRACE t7942: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7943: | | | (figwheel.main/config-repl-connect #)
+TRACE t7944: | | | | (figwheel.main/config-connect-url # #)
+TRACE t7945: | | | | | (figwheel.main/fill-connect-url-template "ws://[[config-hostname]]:[[server-port]]/figwheel-connect" "localhost" ...)
+TRACE t7945: | | | | | => "ws://localhost:9500/figwheel-connect"
+TRACE t7946: | | | | | (figwheel.main/add-to-query "ws://localhost:9500/figwheel-connect" #)
+TRACE t7946: | | | | | => "ws://localhost:9500/figwheel-connect?fwprocess=880b72&fwbuild=dev"
+TRACE t7944: | | | | => "ws://localhost:9500/figwheel-connect?fwprocess=880b72&fwbuild=dev"
+TRACE t7947: | | | | (figwheel.main/repl-connection? #)
+TRACE t7947: | | | | => true
+TRACE t7943: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7948: | | | (figwheel.main/config-cljs-devtools #)
+TRACE t7948: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7949: | | | (figwheel.main/config-open-file-command #)
+TRACE t7949: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7950: | | | (figwheel.main/config-watch-css #)
+TRACE t7950: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7951: | | | (figwheel.main/config-finalize-repl-options #)
+TRACE t7952: | | | | (figwheel.main/get-repl-options #)
+TRACE t7952: | | | | => {:output-dir "resources/public/js/out", :closure-defines #, :inits #, ...}
+TRACE t7953: | | | | (figwheel.main/get-repl-env-options #)
+TRACE t7954: | | | | | (figwheel.main/get-repl-options #)
+TRACE t7954: | | | | | => {:output-dir "resources/public/js/out", :closure-defines #, :inits #, ...}
+TRACE t7953: | | | | => {:connection-filter #object[figwheel.main$config_repl_connect$fn__7426 0x515d6c9f "figwheel.main$config_repl_connect$fn__7426@515d6c9f"], :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out"}
+TRACE t7951: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7955: | | | (figwheel.main/config-extra-mains #)
+TRACE t7955: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7956: | | | (figwheel.main/config-build-inputs #)
+TRACE t7957: | | | | (figwheel.main/config->inputs # #)
+TRACE t7957: | | | | => ("src/cljs")
+TRACE t7956: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7958: | | | (figwheel.main/config-clean #)
+TRACE t7958: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7959: | | | (figwheel.main/config-warn-resource-directory-not-on-classpath #)
+TRACE t7959: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7919: | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7960: | | (figwheel.main/add-default-system-app-handler #)
+TRACE t7960: | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7961: | | (figwheel.repl/repl-env* #)
+TRACE t7961: | | => #figwheel.repl.FigwheelReplEnv{:output-dir "resources/public/js/out", :bound-printer #object[clojure.lang.Atom 0x759c0c14 #], :broadcast false, ...}
+TRACE t7962: | | (figwheel.main/validate-basic-assumptions! #)
+TRACE t7962: | | => nil
+TRACE t7963: | | (figwheel.main/validate-fix-target-classpath! #)
+TRACE t7963: | | => nil
+TRACE t7964: | | (figwheel.main/figwheel-mode? #)
+TRACE t7964: | | => true
+TRACE t7965: | | (figwheel.main/build # # ...)
+TRACE t7966: | | | (figwheel.main/build-cljs "dev" #object[cljs.build.api$inputs$reify__7066 0x2b3247f8 "cljs.build.api$inputs$reify__7066@2b3247f8"] ...)
+TRACE t7967: | | | | (figwheel.main/run-hooks nil #)
+TRACE t7967: | | | | => nil
+[Figwheel] Compiling build dev to "resources/public/js/main.js"
+TRACE t12530: | | | | (figwheel.main/time-elapsed 1564303240477)
+TRACE t12530: | | | | => "41.923 seconds"
+[Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 41.923 seconds.
+TRACE t12531: | | | | (figwheel.main/run-hooks nil #)
+TRACE t12531: | | | | => nil
+TRACE t7966: | | | => nil
+TRACE t12532: | | | (figwheel.main/config->reload-config #)
+TRACE t12532: | | | => {}
+TRACE t12533: | | | (figwheel.main/watch-build "dev" # ...)
+[Figwheel] Watching paths: ("src/cljs") to compile build - dev
+TRACE t12533: | | | => {:watcher #, :watches #}
+TRACE t7965: | | => {:watcher #, :watches #}
+TRACE t12534: | | (figwheel.main/register-build! "dev" #)
+TRACE t12534: | | => {"dev" #}
+TRACE t12535: | | (figwheel.main/start-background-builds #)
+TRACE t12535: | | => nil
+TRACE t12536: | | (figwheel.main/repl-action #figwheel.repl.FigwheelReplEnv# #)
+TRACE t12537: | | | (figwheel.main/log-server-start #figwheel.repl.FigwheelReplEnv#)
+[Figwheel] Starting Server at http://localhost:9500
+TRACE t12537: | | | => nil
+[Figwheel] Starting REPL
+TRACE t12538: | | | (figwheel.main/start-file-logger)
+TRACE t12538: | | | => nil
+TRACE t12539: | | | (figwheel.main/repl #figwheel.repl.FigwheelReplEnv# #)
+Prompt will show when REPL connects to evaluation environment (i.e. a REPL hosting webpage)
+Figwheel Main Controls:
+          (figwheel.main/stop-builds id ...)  ;; stops Figwheel autobuilder for ids
+          (figwheel.main/start-builds id ...) ;; starts autobuilder focused on ids
+          (figwheel.main/reset)               ;; stops, cleans, reloads config, and starts autobuilder
+          (figwheel.main/build-once id ...)   ;; builds source one time
+          (figwheel.main/clean id ...)        ;; deletes compiled cljs target files
+          (figwheel.main/status)              ;; displays current state of system
+Figwheel REPL Controls:
+          (figwheel.repl/conns)               ;; displays the current connections
+          (figwheel.repl/focus session-name)  ;; choose which session name to focus on
+In the cljs.user ns, controls can be called without ns ie. (conns) instead of (figwheel.repl/conns)
+    Docs: (doc function-name-here)
+    Exit: :cljs/quit
+ Results: Stored in vars *1, *2, *3, *e holds last exception object
+TRACE t12540: | | | | (figwheel.main/in-nrepl?)
+TRACE t12541: | | | | | (figwheel.main/bound-var? nrepl.middleware.interruptible-eval/*msg*)
+TRACE t12541: | | | | | => nil
+TRACE t12542: | | | | | (figwheel.main/bound-var? clojure.tools.nrepl.middleware.interruptible-eval/*msg*)
+TRACE t12542: | | | | | => nil
+TRACE t12540: | | | | => nil
+TRACE t12543: | | | | (cljs.repl/repl* #figwheel.repl.FigwheelReplEnv# #)
+TRACE t12544: | | | | | (cljs.repl/read-source-map "cljs/core.aot.js")
+TRACE t12545: | | | | | (figwheel.repl/setup #figwheel.repl.FigwheelReplEnv# #)
+TRACE t12546: | | | | | | (figwheel.repl/run-default-server # #object[clojure.lang.Atom 0x3c042ee3 #])
+TRACE t12547: | | | | | | | (figwheel.repl/run-default-server* # #object[clojure.lang.Atom 0x3c042ee3 #])
+TRACE t12548: | | | | | | | | (figwheel.repl/asyc-http-polling-middleware #object[figwheel.repl$run_default_server_STAR_$fn__4063 0x551a24f "figwheel.repl$run_default_server_STAR_$fn__4063@551a24f"] "/figwheel-connect" ...)
+TRACE t12548: | | | | | | | | => #object[figwheel.repl$asyc_http_polling_middleware$fn__4011 0x408d5c64 "figwheel.repl$asyc_http_polling_middleware$fn__4011@408d5c64"]
+TRACE t12549: | | | | | | | | (figwheel.repl/abstract-websocket-connection #object[clojure.lang.Atom 0x3c042ee3 #])
+TRACE t12549: | | | | | | | | => {:on-connect #object[figwheel.repl$abstract_websocket_connection$fn__3926 0x57ad1859 "figwheel.repl$abstract_websocket_connection$fn__3926@57ad1859"], :on-close #object[figwheel.repl$abstract_websocket_connection$fn__3931 0x35534370 "figwheel.repl$abstract_websocket_connection$fn__3931@35534370"], :on-receive #object[figwheel.repl$abstract_websocket_connection$fn__3933 0x397b4878 "figwheel.repl$abstract_websocket_connection$fn__3933@397b4878"]}
+TRACE t12547: | | | | | | | => #object[org.eclipse.jetty.server.Server 0x28964cb5 "org.eclipse.jetty.server.Server@28964cb5"]
+TRACE t12546: | | | | | | => #object[org.eclipse.jetty.server.Server 0x28964cb5 "org.eclipse.jetty.server.Server@28964cb5"]
+TRACE t12550: | | | | | | (figwheel.repl/add-listener #object[clojure.core$bound_fn_STAR_$fn__5749 0x21b8e988 "clojure.core$bound_fn_STAR_$fn__5749@21b8e988"])
+TRACE t12551: | | | | | | | (figwheel.repl/add-listener #object[clojure.core$bound_fn_STAR_$fn__5749 0x21b8e988 "clojure.core$bound_fn_STAR_$fn__5749@21b8e988"] #object[clojure.core$bound_fn_STAR_$fn__5749 0x21b8e988 "clojure.core$bound_fn_STAR_$fn__5749@21b8e988"])
+TRACE t12551: | | | | | | | => nil
+TRACE t12550: | | | | | | => nil
+TRACE t12552: | | | | | | (figwheel.repl/fill-server-url-template "http://[[server-hostname]]:[[server-port]]" #)
+TRACE t12552: | | | | | | => "http://localhost:9500"
+Opening URL http://localhost:9500
+TRACE t12545: | | | | | => #object[clojure.core$future_call$reify__8454 0x3be8eb13 {:status :pending, :val nil}]
+TRACE t12553: | | | | | (cljs.repl/evaluate-form #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12554: | | | | | | (figwheel.repl/evaluate #figwheel.repl.FigwheelReplEnv# "cljs.core._STAR_print_namespace_maps_STAR_ = true")
+TRACE t12555: | | | | | | | (figwheel.repl/wait-for-connection #figwheel.repl.FigwheelReplEnv#)
+TRACE t12556: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12557: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12557: | | | | | | | | | => ()
+TRACE t12556: | | | | | | | | => ()
+TRACE t12558: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12559: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12559: | | | | | | | | | => ()
+TRACE t12558: | | | | | | | | => ()
+TRACE t12560: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12561: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12561: | | | | | | | | | => ()
+TRACE t12560: | | | | | | | | => ()
+TRACE t12562: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12563: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12563: | | | | | | | | | => ()
+TRACE t12562: | | | | | | | | => ()
+TRACE t12564: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12565: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12565: | | | | | | | | | => ()
+TRACE t12564: | | | | | | | | => ()
+TRACE t12566: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12567: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12567: | | | | | | | | | => ()
+TRACE t12566: | | | | | | | | => ()
+TRACE t12568: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12569: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12569: | | | | | | | | | => ()
+TRACE t12568: | | | | | | | | => ()
+TRACE t12570: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12571: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12571: | | | | | | | | | => ()
+TRACE t12570: | | | | | | | | => ()
+TRACE t12572: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12573: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12573: | | | | | | | | | => ()
+TRACE t12572: | | | | | | | | => ()
+TRACE t12574: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12575: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12575: | | | | | | | | | => ()
+TRACE t12574: | | | | | | | | => ()
+TRACE t12576: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12577: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12577: | | | | | | | | | => ()
+TRACE t12576: | | | | | | | | => ()
+TRACE t12578: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12579: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12579: | | | | | | | | | => ()
+TRACE t12578: | | | | | | | | => ()
+TRACE t12580: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12581: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12581: | | | | | | | | | => ()
+TRACE t12580: | | | | | | | | => ()
+TRACE t12582: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12583: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12583: | | | | | | | | | => ()
+TRACE t12582: | | | | | | | | => ()
+TRACE t12544: | | | | | => {25535 #, 37797 #, 11110 #, ...}
+TRACE t12634: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12635: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12635: | | | | | | | | | => ()
+TRACE t12634: | | | | | | | | => ()
+TRACE t12636: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12637: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12637: | | | | | | | | | => ()
+TRACE t12636: | | | | | | | | => ()
+TRACE t12638: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12639: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12639: | | | | | | | | | => ()
+TRACE t12638: | | | | | | | | => ()
+TRACE t12640: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12641: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12641: | | | | | | | | | => ()
+TRACE t12640: | | | | | | | | => ()
+TRACE t12642: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12643: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12643: | | | | | | | | | => ()
+TRACE t12642: | | | | | | | | => ()
+TRACE t12644: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12645: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12645: | | | | | | | | | => ()
+TRACE t12644: | | | | | | | | => ()
+TRACE t12646: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12647: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12647: | | | | | | | | | => ()
+TRACE t12646: | | | | | | | | => ()
+TRACE t12648: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12649: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12649: | | | | | | | | | => ()
+TRACE t12648: | | | | | | | | => ()
+TRACE t12650: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12651: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12651: | | | | | | | | | => ()
+TRACE t12650: | | | | | | | | => ()
+TRACE t12652: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12653: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12653: | | | | | | | | | => ()
+TRACE t12652: | | | | | | | | => ()
+TRACE t12654: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12655: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12655: | | | | | | | | | => ()
+TRACE t12654: | | | | | | | | => ()
+TRACE t12656: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12657: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12657: | | | | | | | | | => ()
+TRACE t12656: | | | | | | | | => ()
+TRACE t12658: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12659: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12659: | | | | | | | | | => ()
+TRACE t12658: | | | | | | | | => ()
+TRACE t12660: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12661: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12661: | | | | | | | | | => ()
+TRACE t12660: | | | | | | | | => ()
+TRACE t12662: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12663: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12663: | | | | | | | | | => ()
+TRACE t12662: | | | | | | | | => ()
+TRACE t12664: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12665: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12665: | | | | | | | | | => ()
+TRACE t12664: | | | | | | | | => ()
+TRACE t12666: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12667: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12667: | | | | | | | | | => ()
+TRACE t12666: | | | | | | | | => ()
+TRACE t12668: (figwheel.repl/create-connection! {:port 9500, :headers {:sec-websocket-version "13", :sec-websocket-extensions "permessage-deflate", :user-agent "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0", :pragma "no-cache", :sec-websocket-key "UpsiKLqjo6bT1zg1gCReQw==", :upgrade "websocket", :cache-control "no-cache", :host "localhost:9500", :accept-encoding "gzip, deflate", :origin "http://localhost:9500", :connection "keep-alive, Upgrade", :accept-language "en-US,en;q=0.5", :accept "*/*"}, :host "localhost", :websocket? true, :origin "http://localhost:9500", :uri "/figwheel-connect", :query-string "fwprocess=880b72&fwbuild=dev&fwsid=7d632e20-0615-407e-bf18-8b6721aa21e6", :scheme "ws", :request-method :get} {:type :websocket, :is-open-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3803 0x461798ed "figwheel.server.jetty_websocket$websocket_connection_data$fn__3803@461798ed"], :close-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3801 0x6679b112 "figwheel.server.jetty_websocket$websocket_connection_data$fn__3801@6679b112"], :send-fn #object[figwheel.repl$abstract_websocket_connection$fn__3926$fn__3928 0x58845832 "figwheel.repl$abstract_websocket_connection$fn__3926$fn__3928@58845832"]})
+TRACE t12669: | (figwheel.repl/negotiate-id {:port 9500, :headers {:sec-websocket-version "13", :sec-websocket-extensions "permessage-deflate", :user-agent "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0", :pragma "no-cache", :sec-websocket-key "UpsiKLqjo6bT1zg1gCReQw==", :upgrade "websocket", :cache-control "no-cache", :host "localhost:9500", :accept-encoding "gzip, deflate", :origin "http://localhost:9500", :connection "keep-alive, Upgrade", :accept-language "en-US,en;q=0.5", :accept "*/*"}, :host "localhost", :websocket? true, :origin "http://localhost:9500", :uri "/figwheel-connect", :query-string "fwprocess=880b72&fwbuild=dev&fwsid=7d632e20-0615-407e-bf18-8b6721aa21e6", :scheme "ws", :request-method :get} {})
+TRACE t12670: | | (figwheel.repl/parse-query-string "fwprocess=880b72&fwbuild=dev&fwsid=7d632e20-0615-407e-bf18-8b6721aa21e6")
+TRACE t12670: | | => {:fwprocess "880b72", :fwbuild "dev", :fwsid "7d632e20-0615-407e-bf18-8b6721aa21e6"}
+TRACE t12671: | | (figwheel.repl/available-names {})
+TRACE t12672: | | | (figwheel.repl/taken-names {})
+TRACE t12672: | | | => #{}
+TRACE t12671: | | => #{"Angila" "Selene" "Darin" "Cathy" "Iris" "Dominick" "Monroe" "Kenda" "Dirk" "Yan" "Brant" "Enrique" "Rolando" "Stephan" "Grayce" "Steven" "Kittie" "Janina" "Melodee" "Ciara" "Stevie" "Johnson" "Julietta" "Shawnda" "Rema" "Freeman" "Palmer" "Marvin" "Dee" "Porter" "Tana" "Roselle" "Vince" "Gigi" "Gilberto" "Jolie" "Eufemia" "Roselia" "Shawn" "Laveta" "Fred" "Quyen" "Daniel" "Emilio" "Eloy" "Lilliana" "Cecil" "Rosie" "Mac" "Elmo" "Elicia" "Krista" "Mable" "Tanner" "Jerrell" "Lucien" "Marcos" "Hong" "Bridget" "Lilian" "Russ" "Jeramy" "Kelle" "Rosy" "Carmelina" "Shamika" "Cory" "Miyoko" "Shelia" "Glenn" "Thu" "Bruno" "Kim" "Nicola" "Epifania" "Leeanne" "Odelia" "Vashti" "Dodie" "Marshall" "Eduardo" "Jazmin" "Yoshiko" "Jose" "Vanita" "Judson" "Boyce" "Tatiana" "Francisco" "Jerald" "Hilde" "Lorine" "Sal" "Abdul" "Janetta" "Doyle" "Nakesha" "Korey" "Marty"}
+TRACE t12669: | => ["7d632e20-0615-407e-bf18-8b6721aa21e6" "Cathy"]
+TRACE t12673: | (figwheel.repl/parse-query-string "fwprocess=880b72&fwbuild=dev&fwsid=7d632e20-0615-407e-bf18-8b6721aa21e6")
+TRACE t12673: | => {:fwprocess "880b72", :fwbuild "dev", :fwsid "7d632e20-0615-407e-bf18-8b6721aa21e6"}
+TRACE t12668: => {:close-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3801 0x6679b112 "figwheel.server.jetty_websocket$websocket_connection_data$fn__3801@6679b112"], :session-id "7d632e20-0615-407e-bf18-8b6721aa21e6", :session-name "Cathy", :type :websocket, :is-open-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3803 0x461798ed "figwheel.server.jetty_websocket$websocket_connection_data$fn__3803@461798ed"], :send-fn #object[figwheel.repl$abstract_websocket_connection$fn__3926$fn__3928 0x58845832 "figwheel.repl$abstract_websocket_connection$fn__3926$fn__3928@58845832"], :uri "/figwheel-connect", :query {:fwprocess "880b72", :fwbuild "dev", :fwsid "7d632e20-0615-407e-bf18-8b6721aa21e6"}, :query-string "fwprocess=880b72&fwbuild=dev&fwsid=7d632e20-0615-407e-bf18-8b6721aa21e6", :created-at 1564303299131, :scheme "ws", :request-method :get, :figwheel.repl/alive-at 1564303299131}
+TRACE t12674: (figwheel.repl/naming-response {:close-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3801 0x6679b112 "figwheel.server.jetty_websocket$websocket_connection_data$fn__3801@6679b112"], :session-id "7d632e20-0615-407e-bf18-8b6721aa21e6", :session-name "Cathy", :type :websocket, :is-open-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3803 0x461798ed "figwheel.server.jetty_websocket$websocket_connection_data$fn__3803@461798ed"], :send-fn #object[figwheel.repl$abstract_websocket_connection$fn__3926$fn__3928 0x58845832 "figwheel.repl$abstract_websocket_connection$fn__3926$fn__3928@58845832"], :uri "/figwheel-connect", :query {:fwprocess "880b72", :fwbuild "dev", :fwsid "7d632e20-0615-407e-bf18-8b6721aa21e6"}, :query-string "fwprocess=880b72&fwbuild=dev&fwsid=7d632e20-0615-407e-bf18-8b6721aa21e6", :created-at 1564303299131, :scheme "ws", :request-method :get, :figwheel.repl/alive-at 1564303299131})
+TRACE t12674: => "{\"op\":\"naming\",\"session-name\":\"Cathy\",\"session-id\":\"7d632e20-0615-407e-bf18-8b6721aa21e6\",\"connection-type\":\"websocket\"}"
+TRACE t12675: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12676: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12676: | | | | | | | | | => (#)
+TRACE t12675: | | | | | | | | => (#)
+TRACE t12555: | | | | | | | => nil
+TRACE t12677: | | | | | | | (figwheel.repl/eval-connections #figwheel.repl.FigwheelReplEnv#)
+TRACE t12678: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12679: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12679: | | | | | | | | | => (#)
+TRACE t12678: | | | | | | | | => (#)
+TRACE t12677: | | | | | | | => (#)
+TRACE t12680: | | | | | | | (figwheel.repl/send-for-eval #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12681: | | | | | | | | (figwheel.repl/send-for-response # #)
+TRACE t12682: | | | | | | | | | (figwheel.repl/send-for-response* #object[clojure.core$promise$reify__8501 0x79091c84 #] # ...)
+TRACE t12683: | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x4bb5ae09 "figwheel.repl$send_for_response_STAR_$listen__3980@4bb5ae09"])
+TRACE t12684: | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x4bb5ae09 "figwheel.repl$send_for_response_STAR_$listen__3980@4bb5ae09"] #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x4bb5ae09 "figwheel.repl$send_for_response_STAR_$listen__3980@4bb5ae09"])
+TRACE t12684: | | | | | | | | | | | => nil
+TRACE t12683: | | | | | | | | | | => nil
+TRACE t12685: | | | | | | | | | | (figwheel.repl/connection-send # "{\"session-id\":\"7d632e20-0615-407e-bf18-8b6721aa21e6\",\"session-name\":\"Cathy\",\"op\":\"eval\",\"code\":\"cljs.core._STAR_print_namespace_maps_STAR_ = true\",\"uuid\":\"1f3801bb-1722-4d86-b9d3-c048324c0f9b\"}")
+TRACE t12685: | | | | | | | | | | => nil
+TRACE t12682: | | | | | | | | | => nil
+TRACE t12681: | | | | | | | | => #object[clojure.core$promise$reify__8501 0x79091c84 {:status :pending, :val nil}]
+TRACE t12680: | | | | | | | => #object[clojure.core$promise$reify__8501 0x79091c84 {:status :pending, :val nil}]
+TRACE t12686: (figwheel.repl/receive-message! "{:session-id \"7d632e20-0615-407e-bf18-8b6721aa21e6\", :session-name \"Cathy\", :response {:status :success, :out \"\", :ua-product :firefox, :value \"true\"}, :uuid \"1f3801bb-1722-4d86-b9d3-c048324c0f9b\"}")
+TRACE t12554: | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t12553: | | | | | => "true"
+TRACE t12687: | (figwheel.repl/remove-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x4bb5ae09 "figwheel.repl$send_for_response_STAR_$listen__3980@4bb5ae09"])
+TRACE t12687: | => nil
+TRACE t12686: => nil
+TRACE t12688: | | | | | (cljs.repl/maybe-install-npm-deps #)
+TRACE t12688: | | | | | => nil
+TRACE t12689: | | | | | (cljs.repl/analyze-source "src/cljs" #)
+TRACE t12689: | | | | | => nil
+TRACE t12690: | | | | | (cljs.repl/evaluate-form #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12693: | | | | | | (cljs.repl/load-dependencies #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12694: | | | | | | | (cljs.repl/load-namespace #figwheel.repl.FigwheelReplEnv# cljs.pprint ...)
+TRACE t12695: | | | | | | | | (cljs.repl/ns->input cljs.pprint #)
+TRACE t12695: | | | | | | | | => {:ns cljs.pprint, :provides #, :requires #, ...}
+TRACE t12696: | | | | | | | | (cljs.repl/compilable? #)
+TRACE t12696: | | | | | | | | => true
+TRACE t12697: | | | | | | | | (cljs.repl/env->opts #figwheel.repl.FigwheelReplEnv#)
+TRACE t12698: | | | | | | | | | (cljs.repl/env->opts #figwheel.repl.FigwheelReplEnv# nil)
+TRACE t12698: | | | | | | | | | => {:output-dir ".repl", :bound-printer #object[clojure.lang.Atom 0x759c0c14 #], :broadcast false, ...}
+TRACE t12697: | | | | | | | | => {:output-dir ".repl", :bound-printer #object[clojure.lang.Atom 0x759c0c14 #], :broadcast false, ...}
+TRACE t12699: | | | | | | | | (cljs.repl/load-sources #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12700: | | | | | | | | | (figwheel.repl/evaluate #figwheel.repl.FigwheelReplEnv# "goog.addDependency(\"string/string.js\", ['goog.string', 'goog.string.Unicode'], []);\ngoog.addDependency(\"debug/error.js\", ['goog.debug.Error'], []);\ngoog.addDependency(\"dom/nodetype.js\", ['goog.dom.NodeType'], []);\ngoog.addDependency(\"asserts/asserts.js\", ['goog.asserts', 'goog.asserts.AssertionError'], ['goog.debug.Error', 'goog.dom.NodeType', 'goog.string']);\ngoog.addDependency(\"array/array.js\", ['goog.array'], ['goog.asserts']);\ngoog.addDependency(\"object/object.js\", ['goog.object'], []);\ngoog.addDependency(\"structs/structs.js\", ['goog.structs'], ['goog.array', 'goog.object']);\ngoog.addDependency(\"functions/functions.js\", ['goog.functions'], []);\ngoog.addDependency(\"math/math.js\", ['goog.math'], ['goog.array', 'goog.asserts']);\ngoog.addDependency(\"iter/iter.js\", ['goog.iter', 'goog.iter.Iterable', 'goog.iter.Iterator', 'goog.iter.StopIteration'], ['goog.array', 'goog.asserts', 'goog.functions', 'goog.math']);\ngoog.addDependency(\"structs/map.js\", ['goog.structs.Map'], ['goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.object']);\ngoog.addDependency(\"uri/utils.js\", ['goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.QueryArray', 'goog.uri.utils.QueryValue', 'goog.uri.utils.StandardQueryParam'], ['goog.array', 'goog.asserts', 'goog.string']);\ngoog.addDependency(\"uri/uri.js\", ['goog.Uri', 'goog.Uri.QueryData'], ['goog.array', 'goog.asserts', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.StandardQueryParam']);\ngoog.addDependency(\"math/integer.js\", ['goog.math.Integer'], []);\ngoog.addDependency(\"string/stringbuffer.js\", ['goog.string.StringBuffer'], []);\ngoog.addDependency(\"reflect/reflect.js\", ['goog.reflect'], []);\ngoog.addDependency(\"math/long.js\", ['goog.math.Long'], ['goog.asserts', 'goog.reflect']);\ngoog.addDependency(\"../cljs/core.js\", ['cljs.core'], ['goog.string', 'goog.Uri', 'goog.object', 'goog.math.Integer', 'goog.string.StringBuffer', 'goog.array', 'goog.math.Long']);\ngoog.addDependency(\"../clojure/string.js\", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);\ngoog.addDependency(\"../cljs/pprint.js\", ['cljs.pprint'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer', 'clojure.string']);\n")
+TRACE t12701: | | | | | | | | | | (figwheel.repl/wait-for-connection #figwheel.repl.FigwheelReplEnv#)
+TRACE t12702: | | | | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12703: | | | | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12703: | | | | | | | | | | | | => (#)
+TRACE t12702: | | | | | | | | | | | => (#)
+TRACE t12701: | | | | | | | | | | => nil
+TRACE t12704: | | | | | | | | | | (figwheel.repl/eval-connections #figwheel.repl.FigwheelReplEnv#)
+TRACE t12705: | | | | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12706: | | | | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12706: | | | | | | | | | | | | => (#)
+TRACE t12705: | | | | | | | | | | | => (#)
+TRACE t12704: | | | | | | | | | | => (#)
+TRACE t12707: | | | | | | | | | | (figwheel.repl/send-for-eval #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12708: | | | | | | | | | | | (figwheel.repl/send-for-response # #)
+TRACE t12709: | | | | | | | | | | | | (figwheel.repl/send-for-response* #object[clojure.core$promise$reify__8501 0xe0c6e2c #] # ...)
+TRACE t12710: | | | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x3b0ee640 "figwheel.repl$send_for_response_STAR_$listen__3980@3b0ee640"])
+TRACE t12711: | | | | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x3b0ee640 "figwheel.repl$send_for_response_STAR_$listen__3980@3b0ee640"] #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x3b0ee640 "figwheel.repl$send_for_response_STAR_$listen__3980@3b0ee640"])
+TRACE t12711: | | | | | | | | | | | | | | => nil
+TRACE t12710: | | | | | | | | | | | | | => nil
+TRACE t12712: | | | | | | | | | | | | | (figwheel.repl/connection-send # "{\"session-id\":\"7d632e20-0615-407e-bf18-8b6721aa21e6\",\"session-name\":\"Cathy\",\"op\":\"eval\",\"code\":\"goog.addDependency(\\\"string\\/string.js\\\", ['goog.string', 'goog.string.Unicode'], []);\\ngoog.addDependency(\\\"debug\\/error.js\\\", ['goog.debug.Error'], []);\\ngoog.addDependency(\\\"dom\\/nodetype.js\\\", ['goog.dom.NodeType'], []);\\ngoog.addDependency(\\\"asserts\\/asserts.js\\\", ['goog.asserts', 'goog.asserts.AssertionError'], ['goog.debug.Error', 'goog.dom.NodeType', 'goog.string']);\\ngoog.addDependency(\\\"array\\/array.js\\\", ['goog.array'], ['goog.asserts']);\\ngoog.addDependency(\\\"object\\/object.js\\\", ['goog.object'], []);\\ngoog.addDependency(\\\"structs\\/structs.js\\\", ['goog.structs'], ['goog.array', 'goog.object']);\\ngoog.addDependency(\\\"functions\\/functions.js\\\", ['goog.functions'], []);\\ngoog.addDependency(\\\"math\\/math.js\\\", ['goog.math'], ['goog.array', 'goog.asserts']);\\ngoog.addDependency(\\\"iter\\/iter.js\\\", ['goog.iter', 'goog.iter.Iterable', 'goog.iter.Iterator', 'goog.iter.StopIteration'], ['goog.array', 'goog.asserts', 'goog.functions', 'goog.math']);\\ngoog.addDependency(\\\"structs\\/map.js\\\", ['goog.structs.Map'], ['goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.object']);\\ngoog.addDependency(\\\"uri\\/utils.js\\\", ['goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.QueryArray', 'goog.uri.utils.QueryValue', 'goog.uri.utils.StandardQueryParam'], ['goog.array', 'goog.asserts', 'goog.string']);\\ngoog.addDependency(\\\"uri\\/uri.js\\\", ['goog.Uri', 'goog.Uri.QueryData'], ['goog.array', 'goog.asserts', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.StandardQueryParam']);\\ngoog.addDependency(\\\"math\\/integer.js\\\", ['goog.math.Integer'], []);\\ngoog.addDependency(\\\"string\\/stringbuffer.js\\\", ['goog.string.StringBuffer'], []);\\ngoog.addDependency(\\\"reflect\\/reflect.js\\\", ['goog.reflect'], []);\\ngoog.addDependency(\\\"math\\/long.js\\\", ['goog.math.Long'], ['goog.asserts', 'goog.reflect']);\\ngoog.addDependency(\\\"..\\/cljs\\/core.js\\\", ['cljs.core'], ['goog.string', 'goog.Uri', 'goog.object', 'goog.math.Integer', 'goog.string.StringBuffer', 'goog.array', 'goog.math.Long']);\\ngoog.addDependency(\\\"..\\/clojure\\/string.js\\\", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);\\ngoog.addDependency(\\\"..\\/cljs\\/pprint.js\\\", ['cljs.pprint'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer', 'clojure.string']);\\n\",\"uuid\":\"eed92bad-d1bb-4045-885d-e00100e6fd4f\"}")
+TRACE t12712: | | | | | | | | | | | | | => nil
+TRACE t12709: | | | | | | | | | | | | => nil
+TRACE t12708: | | | | | | | | | | | => #object[clojure.core$promise$reify__8501 0xe0c6e2c {:status :pending, :val nil}]
+TRACE t12707: | | | | | | | | | | => #object[clojure.core$promise$reify__8501 0xe0c6e2c {:status :pending, :val nil}]
+TRACE t12713: (figwheel.repl/receive-message! "{:session-id \"7d632e20-0615-407e-bf18-8b6721aa21e6\", :session-name \"Cathy\", :response {:status :success, :out \"\", :ua-product :firefox, :value \"nil\"}, :uuid \"eed92bad-d1bb-4045-885d-e00100e6fd4f\"}")
+TRACE t12700: | | | | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t12714: | (figwheel.repl/remove-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x3b0ee640 "figwheel.repl$send_for_response_STAR_$listen__3980@3b0ee640"])
+TRACE t12699: | | | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t12714: | => nil
+TRACE t12713: => nil
+TRACE t12694: | | | | | | | => (#cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# ...)
+TRACE t12715: | | | | | | | (cljs.repl/load-namespace #figwheel.repl.FigwheelReplEnv# figwheel.repl ...)
+TRACE t12716: | | | | | | | | (cljs.repl/ns->input figwheel.repl #)
+TRACE t12716: | | | | | | | | => {:ns figwheel.repl, :provides #, :requires #, ...}
+TRACE t12717: | | | | | | | | (cljs.repl/compilable? #)
+TRACE t12717: | | | | | | | | => true
+TRACE t12718: | | | | | | | | (cljs.repl/env->opts #figwheel.repl.FigwheelReplEnv#)
+TRACE t12719: | | | | | | | | | (cljs.repl/env->opts #figwheel.repl.FigwheelReplEnv# nil)
+TRACE t12719: | | | | | | | | | => {:output-dir ".repl", :bound-printer #object[clojure.lang.Atom 0x759c0c14 #], :broadcast false, ...}
+TRACE t12718: | | | | | | | | => {:output-dir ".repl", :bound-printer #object[clojure.lang.Atom 0x759c0c14 #], :broadcast false, ...}
+TRACE t12720: | | | | | | | | (cljs.repl/load-sources #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12721: | | | | | | | | | (figwheel.repl/evaluate #figwheel.repl.FigwheelReplEnv# "goog.addDependency(\"debug/error.js\", ['goog.debug.Error'], []);\ngoog.addDependency(\"dom/nodetype.js\", ['goog.dom.NodeType'], []);\ngoog.addDependency(\"string/string.js\", ['goog.string', 'goog.string.Unicode'], []);\ngoog.addDependency(\"asserts/asserts.js\", ['goog.asserts', 'goog.asserts.AssertionError'], ['goog.debug.Error', 'goog.dom.NodeType', 'goog.string']);\ngoog.addDependency(\"array/array.js\", ['goog.array'], ['goog.asserts']);\ngoog.addDependency(\"labs/useragent/util.js\", ['goog.labs.userAgent.util'], ['goog.string']);\ngoog.addDependency(\"object/object.js\", ['goog.object'], []);\ngoog.addDependency(\"labs/useragent/browser.js\", ['goog.labs.userAgent.browser'], ['goog.array', 'goog.labs.userAgent.util', 'goog.object', 'goog.string']);\ngoog.addDependency(\"labs/useragent/platform.js\", ['goog.labs.userAgent.platform'], ['goog.labs.userAgent.util', 'goog.string']);\ngoog.addDependency(\"labs/useragent/engine.js\", ['goog.labs.userAgent.engine'], ['goog.array', 'goog.labs.userAgent.util', 'goog.string']);\ngoog.addDependency(\"reflect/reflect.js\", ['goog.reflect'], []);\ngoog.addDependency(\"useragent/useragent.js\", ['goog.userAgent'], ['goog.labs.userAgent.browser', 'goog.labs.userAgent.engine', 'goog.labs.userAgent.platform', 'goog.labs.userAgent.util', 'goog.reflect', 'goog.string']);\ngoog.addDependency(\"useragent/product.js\", ['goog.userAgent.product'], ['goog.labs.userAgent.browser', 'goog.labs.userAgent.platform', 'goog.userAgent']);\ngoog.addDependency(\"promise/thenable.js\", ['goog.Thenable'], []);\ngoog.addDependency(\"async/freelist.js\", ['goog.async.FreeList'], []);\ngoog.addDependency(\"async/workqueue.js\", ['goog.async.WorkItem', 'goog.async.WorkQueue'], ['goog.asserts', 'goog.async.FreeList']);\ngoog.addDependency(\"debug/entrypointregistry.js\", ['goog.debug.EntryPointMonitor', 'goog.debug.entryPointRegistry'], ['goog.asserts']);\ngoog.addDependency(\"dom/htmlelement.js\", ['goog.dom.HtmlElement'], []);\ngoog.addDependency(\"dom/tagname.js\", ['goog.dom.TagName'], ['goog.dom.HtmlElement']);\ngoog.addDependency(\"functions/functions.js\", ['goog.functions'], []);\ngoog.addDependency(\"async/nexttick.js\", ['goog.async.nextTick', 'goog.async.throwException'], ['goog.debug.entryPointRegistry', 'goog.dom.TagName', 'goog.functions', 'goog.labs.userAgent.browser', 'goog.labs.userAgent.engine']);\ngoog.addDependency(\"async/run.js\", ['goog.async.run'], ['goog.async.WorkQueue', 'goog.async.nextTick', 'goog.async.throwException']);\ngoog.addDependency(\"promise/resolver.js\", ['goog.promise.Resolver'], []);\ngoog.addDependency(\"promise/promise.js\", ['goog.Promise'], ['goog.Thenable', 'goog.asserts', 'goog.async.FreeList', 'goog.async.run', 'goog.async.throwException', 'goog.debug.Error', 'goog.promise.Resolver']);\ngoog.addDependency(\"disposable/idisposable.js\", ['goog.disposable.IDisposable'], []);\ngoog.addDependency(\"disposable/disposable.js\", ['goog.Disposable', 'goog.dispose', 'goog.disposeAll'], ['goog.disposable.IDisposable']);\ngoog.addDependency(\"events/browserfeature.js\", ['goog.events.BrowserFeature'], ['goog.userAgent']);\ngoog.addDependency(\"events/eventid.js\", ['goog.events.EventId'], []);\ngoog.addDependency(\"events/event.js\", ['goog.events.Event', 'goog.events.EventLike'], ['goog.Disposable', 'goog.events.EventId']);\ngoog.addDependency(\"events/eventtype.js\", ['goog.events.EventType'], ['goog.userAgent']);\ngoog.addDependency(\"events/browserevent.js\", ['goog.events.BrowserEvent', 'goog.events.BrowserEvent.MouseButton'], ['goog.events.BrowserFeature', 'goog.events.Event', 'goog.events.EventType', 'goog.reflect', 'goog.userAgent']);\ngoog.addDependency(\"events/listenable.js\", ['goog.events.Listenable', 'goog.events.ListenableKey'], ['goog.events.EventId']);\ngoog.addDependency(\"events/listener.js\", ['goog.events.Listener'], ['goog.events.ListenableKey']);\ngoog.addDependency(\"events/listenermap.js\", ['goog.events.ListenerMap'], ['goog.array', 'goog.events.Listener', 'goog.object']);\ngoog.addDependency(\"events/events.js\", ['goog.events', 'goog.events.CaptureSimulationMode', 'goog.events.Key', 'goog.events.ListenableType'], ['goog.asserts', 'goog.debug.entryPointRegistry', 'goog.events.BrowserEvent', 'goog.events.BrowserFeature', 'goog.events.Listenable', 'goog.events.ListenerMap']);\ngoog.addDependency(\"events/eventtarget.js\", ['goog.events.EventTarget'], ['goog.Disposable', 'goog.asserts', 'goog.events', 'goog.events.Event', 'goog.events.Listenable', 'goog.events.ListenerMap', 'goog.object']);\ngoog.addDependency(\"timer/timer.js\", ['goog.Timer'], ['goog.Promise', 'goog.events.EventTarget']);\ngoog.addDependency(\"json/json.js\", ['goog.json', 'goog.json.Replacer', 'goog.json.Reviver', 'goog.json.Serializer'], []);\ngoog.addDependency(\"json/hybrid.js\", ['goog.json.hybrid'], ['goog.asserts', 'goog.json']);\ngoog.addDependency(\"debug/errorcontext.js\", ['goog.debug.errorcontext'], []);\ngoog.addDependency(\"debug/debug.js\", ['goog.debug'], ['goog.array', 'goog.debug.errorcontext', 'goog.userAgent']);\ngoog.addDependency(\"debug/logrecord.js\", ['goog.debug.LogRecord'], []);\ngoog.addDependency(\"debug/logbuffer.js\", ['goog.debug.LogBuffer'], ['goog.asserts', 'goog.debug.LogRecord']);\ngoog.addDependency(\"debug/logger.js\", ['goog.debug.LogManager', 'goog.debug.Loggable', 'goog.debug.Logger', 'goog.debug.Logger.Level'], ['goog.array', 'goog.asserts', 'goog.debug', 'goog.debug.LogBuffer', 'goog.debug.LogRecord']);\ngoog.addDependency(\"log/log.js\", ['goog.log', 'goog.log.Level', 'goog.log.LogRecord', 'goog.log.Logger'], ['goog.debug', 'goog.debug.LogManager', 'goog.debug.LogRecord', 'goog.debug.Logger']);\ngoog.addDependency(\"net/errorcode.js\", ['goog.net.ErrorCode'], []);\ngoog.addDependency(\"net/eventtype.js\", ['goog.net.EventType'], []);\ngoog.addDependency(\"net/httpstatus.js\", ['goog.net.HttpStatus'], []);\ngoog.addDependency(\"net/xhrlike.js\", ['goog.net.XhrLike'], []);\ngoog.addDependency(\"net/xmlhttpfactory.js\", ['goog.net.XmlHttpFactory'], ['goog.net.XhrLike']);\ngoog.addDependency(\"net/wrapperxmlhttpfactory.js\", ['goog.net.WrapperXmlHttpFactory'], ['goog.net.XhrLike', 'goog.net.XmlHttpFactory']);\ngoog.addDependency(\"net/xmlhttp.js\", ['goog.net.DefaultXmlHttpFactory', 'goog.net.XmlHttp', 'goog.net.XmlHttp.OptionType', 'goog.net.XmlHttp.ReadyState', 'goog.net.XmlHttpDefines'], ['goog.asserts', 'goog.net.WrapperXmlHttpFactory', 'goog.net.XmlHttpFactory']);\ngoog.addDependency(\"structs/structs.js\", ['goog.structs'], ['goog.array', 'goog.object']);\ngoog.addDependency(\"math/math.js\", ['goog.math'], ['goog.array', 'goog.asserts']);\ngoog.addDependency(\"iter/iter.js\", ['goog.iter', 'goog.iter.Iterable', 'goog.iter.Iterator', 'goog.iter.StopIteration'], ['goog.array', 'goog.asserts', 'goog.functions', 'goog.math']);\ngoog.addDependency(\"structs/map.js\", ['goog.structs.Map'], ['goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.object']);\ngoog.addDependency(\"uri/utils.js\", ['goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.QueryArray', 'goog.uri.utils.QueryValue', 'goog.uri.utils.StandardQueryParam'], ['goog.array', 'goog.asserts', 'goog.string']);\ngoog.addDependency(\"net/xhrio.js\", ['goog.net.XhrIo', 'goog.net.XhrIo.ResponseType'], ['goog.Timer', 'goog.array', 'goog.asserts', 'goog.debug.entryPointRegistry', 'goog.events.EventTarget', 'goog.json.hybrid', 'goog.log', 'goog.net.ErrorCode', 'goog.net.EventType', 'goog.net.HttpStatus', 'goog.net.XmlHttp', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.userAgent']);\ngoog.addDependency(\"debug/relativetimeprovider.js\", ['goog.debug.RelativeTimeProvider'], []);\ngoog.addDependency(\"dom/tags.js\", ['goog.dom.tags'], ['goog.object']);\ngoog.addDependency(\"string/typedstring.js\", ['goog.string.TypedString'], []);\ngoog.addDependency(\"string/const.js\", ['goog.string.Const'], ['goog.asserts', 'goog.string.TypedString']);\ngoog.addDependency(\"html/safescript.js\", ['goog.html.SafeScript'], ['goog.asserts', 'goog.string.Const', 'goog.string.TypedString']);\ngoog.addDependency(\"fs/url.js\", ['goog.fs.url'], []);\ngoog.addDependency(\"i18n/bidi.js\", ['goog.i18n.bidi', 'goog.i18n.bidi.Dir', 'goog.i18n.bidi.DirectionalString', 'goog.i18n.bidi.Format'], []);\ngoog.addDependency(\"html/trustedresourceurl.js\", ['goog.html.TrustedResourceUrl'], ['goog.asserts', 'goog.i18n.bidi.Dir', 'goog.i18n.bidi.DirectionalString', 'goog.string.Const', 'goog.string.TypedString']);\ngoog.addDependency(\"html/safeurl.js\", ['goog.html.SafeUrl'], ['goog.asserts', 'goog.fs.url', 'goog.html.TrustedResourceUrl', 'goog.i18n.bidi.Dir', 'goog.i18n.bidi.DirectionalString', 'goog.string', 'goog.string.Const', 'goog.string.TypedString']);\ngoog.addDependency(\"html/safestyle.js\", ['goog.html.SafeStyle'], ['goog.array', 'goog.asserts', 'goog.html.SafeUrl', 'goog.string', 'goog.string.Const', 'goog.string.TypedString']);\ngoog.addDependency(\"html/safestylesheet.js\", ['goog.html.SafeStyleSheet'], ['goog.array', 'goog.asserts', 'goog.html.SafeStyle', 'goog.object', 'goog.string', 'goog.string.Const', 'goog.string.TypedString']);\ngoog.addDependency(\"html/safehtml.js\", ['goog.html.SafeHtml'], ['goog.array', 'goog.asserts', 'goog.dom.TagName', 'goog.dom.tags', 'goog.html.SafeScript', 'goog.html.SafeStyle', 'goog.html.SafeStyleSheet', 'goog.html.SafeUrl', 'goog.html.TrustedResourceUrl', 'goog.i18n.bidi.Dir', 'goog.i18n.bidi.DirectionalString', 'goog.labs.userAgent.browser', 'goog.object', 'goog.string', 'goog.string.Const', 'goog.string.TypedString']);\ngoog.addDependency(\"html/uncheckedconversions.js\", ['goog.html.uncheckedconversions'], ['goog.asserts', 'goog.html.SafeHtml', 'goog.html.SafeScript', 'goog.html.SafeStyle', 'goog.html.SafeStyleSheet', 'goog.html.SafeUrl', 'goog.html.TrustedResourceUrl', 'goog.string', 'goog.string.Const']);\ngoog.addDependency(\"debug/formatter.js\", ['goog.debug.Formatter', 'goog.debug.HtmlFormatter', 'goog.debug.TextFormatter'], ['goog.debug', 'goog.debug.Logger', 'goog.debug.RelativeTimeProvider', 'goog.html.SafeHtml', 'goog.html.SafeUrl', 'goog.html.uncheckedconversions', 'goog.string.Const']);\ngoog.addDependency(\"debug/console.js\", ['goog.debug.Console'], ['goog.debug.LogManager', 'goog.debug.Logger', 'goog.debug.TextFormatter']);\ngoog.addDependency(\"storage/mechanism/errorcode.js\", ['goog.storage.mechanism.ErrorCode'], []);\ngoog.addDependency(\"storage/mechanism/mechanism.js\", ['goog.storage.mechanism.Mechanism'], []);\ngoog.addDependency(\"storage/mechanism/iterablemechanism.js\", ['goog.storage.mechanism.IterableMechanism'], ['goog.array', 'goog.asserts', 'goog.iter', 'goog.storage.mechanism.Mechanism']);\ngoog.addDependency(\"storage/mechanism/html5webstorage.js\", ['goog.storage.mechanism.HTML5WebStorage'], ['goog.asserts', 'goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.storage.mechanism.ErrorCode', 'goog.storage.mechanism.IterableMechanism']);\ngoog.addDependency(\"storage/mechanism/html5sessionstorage.js\", ['goog.storage.mechanism.HTML5SessionStorage'], ['goog.storage.mechanism.HTML5WebStorage']);\ngoog.addDependency(\"uri/uri.js\", ['goog.Uri', 'goog.Uri.QueryData'], ['goog.array', 'goog.asserts', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.StandardQueryParam']);\ngoog.addDependency(\"mochikit/async/deferred.js\", ['goog.async.Deferred', 'goog.async.Deferred.AlreadyCalledError', 'goog.async.Deferred.CanceledError'], ['goog.Promise', 'goog.Thenable', 'goog.array', 'goog.asserts', 'goog.debug.Error']);\ngoog.addDependency(\"dom/browserfeature.js\", ['goog.dom.BrowserFeature'], ['goog.userAgent']);\ngoog.addDependency(\"dom/asserts.js\", ['goog.dom.asserts'], ['goog.asserts']);\ngoog.addDependency(\"dom/safe.js\", ['goog.dom.safe', 'goog.dom.safe.InsertAdjacentHtmlPosition'], ['goog.asserts', 'goog.dom.asserts', 'goog.html.SafeHtml', 'goog.html.SafeScript', 'goog.html.SafeStyle', 'goog.html.SafeUrl', 'goog.html.TrustedResourceUrl', 'goog.string', 'goog.string.Const']);\ngoog.addDependency(\"math/coordinate.js\", ['goog.math.Coordinate'], ['goog.math']);\ngoog.addDependency(\"math/size.js\", ['goog.math.Size'], []);\ngoog.addDependency(\"dom/dom.js\", ['goog.dom', 'goog.dom.Appendable', 'goog.dom.DomHelper'], ['goog.array', 'goog.asserts', 'goog.dom.BrowserFeature', 'goog.dom.NodeType', 'goog.dom.TagName', 'goog.dom.safe', 'goog.html.SafeHtml', 'goog.html.uncheckedconversions', 'goog.math.Coordinate', 'goog.math.Size', 'goog.object', 'goog.string', 'goog.string.Unicode', 'goog.userAgent']);\ngoog.addDependency(\"net/jsloader.js\", ['goog.net.jsloader', 'goog.net.jsloader.Error', 'goog.net.jsloader.ErrorCode', 'goog.net.jsloader.Options'], ['goog.array', 'goog.async.Deferred', 'goog.debug.Error', 'goog.dom', 'goog.dom.TagName', 'goog.dom.safe', 'goog.html.TrustedResourceUrl', 'goog.object']);\ngoog.addDependency(\"math/integer.js\", ['goog.math.Integer'], []);\ngoog.addDependency(\"string/stringbuffer.js\", ['goog.string.StringBuffer'], []);\ngoog.addDependency(\"math/long.js\", ['goog.math.Long'], ['goog.asserts', 'goog.reflect']);\ngoog.addDependency(\"../cljs/core.js\", ['cljs.core'], ['goog.string', 'goog.Uri', 'goog.object', 'goog.math.Integer', 'goog.string.StringBuffer', 'goog.array', 'goog.math.Long']);\ngoog.addDependency(\"html/legacyconversions.js\", ['goog.html.legacyconversions'], ['goog.html.SafeHtml', 'goog.html.SafeScript', 'goog.html.SafeStyle', 'goog.html.SafeStyleSheet', 'goog.html.SafeUrl', 'goog.html.TrustedResourceUrl']);\ngoog.addDependency(\"storage/mechanism/html5localstorage.js\", ['goog.storage.mechanism.HTML5LocalStorage'], ['goog.storage.mechanism.HTML5WebStorage']);\ngoog.addDependency(\"storage/mechanism/ieuserdata.js\", ['goog.storage.mechanism.IEUserData'], ['goog.asserts', 'goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.storage.mechanism.ErrorCode', 'goog.storage.mechanism.IterableMechanism', 'goog.structs.Map', 'goog.userAgent']);\ngoog.addDependency(\"storage/mechanism/prefixedmechanism.js\", ['goog.storage.mechanism.PrefixedMechanism'], ['goog.iter.Iterator', 'goog.storage.mechanism.IterableMechanism']);\ngoog.addDependency(\"storage/mechanism/mechanismfactory.js\", ['goog.storage.mechanism.mechanismfactory'], ['goog.storage.mechanism.HTML5LocalStorage', 'goog.storage.mechanism.HTML5SessionStorage', 'goog.storage.mechanism.IEUserData', 'goog.storage.mechanism.PrefixedMechanism']);\ngoog.addDependency(\"net/websocket.js\", ['goog.net.WebSocket', 'goog.net.WebSocket.ErrorEvent', 'goog.net.WebSocket.EventType', 'goog.net.WebSocket.MessageEvent'], ['goog.Timer', 'goog.asserts', 'goog.debug.entryPointRegistry', 'goog.events', 'goog.events.Event', 'goog.events.EventTarget', 'goog.log']);\ngoog.addDependency(\"../clojure/string.js\", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);\ngoog.addDependency(\"../figwheel/repl.js\", ['figwheel.repl'], ['goog.userAgent.product', 'goog.net.XhrIo', 'goog.json', 'goog.string', 'goog.debug.Console', 'goog.storage.mechanism.HTML5SessionStorage', 'goog.Uri.QueryData', 'goog.net.jsloader', 'goog.Uri', 'cljs.core', 'goog.object', 'goog.log', 'goog.html.legacyconversions', 'goog.Promise', 'goog.storage.mechanism.mechanismfactory', 'goog.net.WebSocket', 'clojure.string', 'goog.array']);\n")
+TRACE t12722: | | | | | | | | | | (figwheel.repl/wait-for-connection #figwheel.repl.FigwheelReplEnv#)
+TRACE t12723: | | | | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12724: | | | | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12724: | | | | | | | | | | | | => (#)
+TRACE t12723: | | | | | | | | | | | => (#)
+TRACE t12722: | | | | | | | | | | => nil
+TRACE t12725: | | | | | | | | | | (figwheel.repl/eval-connections #figwheel.repl.FigwheelReplEnv#)
+TRACE t12726: | | | | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12727: | | | | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12727: | | | | | | | | | | | | => (#)
+TRACE t12726: | | | | | | | | | | | => (#)
+TRACE t12725: | | | | | | | | | | => (#)
+TRACE t12728: | | | | | | | | | | (figwheel.repl/send-for-eval #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12729: | | | | | | | | | | | (figwheel.repl/send-for-response # #)
+TRACE t12730: | | | | | | | | | | | | (figwheel.repl/send-for-response* #object[clojure.core$promise$reify__8501 0x60b1df88 #] # ...)
+TRACE t12731: | | | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x23f76d41 "figwheel.repl$send_for_response_STAR_$listen__3980@23f76d41"])
+TRACE t12732: | | | | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x23f76d41 "figwheel.repl$send_for_response_STAR_$listen__3980@23f76d41"] #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x23f76d41 "figwheel.repl$send_for_response_STAR_$listen__3980@23f76d41"])
+TRACE t12732: | | | | | | | | | | | | | | => nil
+TRACE t12731: | | | | | | | | | | | | | => nil
+TRACE t12733: | | | | | | | | | | | | | (figwheel.repl/connection-send # "{\"session-id\":\"7d632e20-0615-407e-bf18-8b6721aa21e6\",\"session-name\":\"Cathy\",\"op\":\"eval\",\"code\":\"goog.addDependency(\\\"debug\\/error.js\\\", ['goog.debug.Error'], []);\\ngoog.addDependency(\\\"dom\\/nodetype.js\\\", ['goog.dom.NodeType'], []);\\ngoog.addDependency(\\\"string\\/string.js\\\", ['goog.string', 'goog.string.Unicode'], []);\\ngoog.addDependency(\\\"asserts\\/asserts.js\\\", ['goog.asserts', 'goog.asserts.AssertionError'], ['goog.debug.Error', 'goog.dom.NodeType', 'goog.string']);\\ngoog.addDependency(\\\"array\\/array.js\\\", ['goog.array'], ['goog.asserts']);\\ngoog.addDependency(\\\"labs\\/useragent\\/util.js\\\", ['goog.labs.userAgent.util'], ['goog.string']);\\ngoog.addDependency(\\\"object\\/object.js\\\", ['goog.object'], []);\\ngoog.addDependency(\\\"labs\\/useragent\\/browser.js\\\", ['goog.labs.userAgent.browser'], ['goog.array', 'goog.labs.userAgent.util', 'goog.object', 'goog.string']);\\ngoog.addDependency(\\\"labs\\/useragent\\/platform.js\\\", ['goog.labs.userAgent.platform'], ['goog.labs.userAgent.util', 'goog.string']);\\ngoog.addDependency(\\\"labs\\/useragent\\/engine.js\\\", ['goog.labs.userAgent.engine'], ['goog.array', 'goog.labs.userAgent.util', 'goog.string']);\\ngoog.addDependency(\\\"reflect\\/reflect.js\\\", ['goog.reflect'], []);\\ngoog.addDependency(\\\"useragent\\/useragent.js\\\", ['goog.userAgent'], ['goog.labs.userAgent.browser', 'goog.labs.userAgent.engine', 'goog.labs.userAgent.platform', 'goog.labs.userAgent.util', 'goog.reflect', 'goog.string']);\\ngoog.addDependency(\\\"useragent\\/product.js\\\", ['goog.userAgent.product'], ['goog.labs.userAgent.browser', 'goog.labs.userAgent.platform', 'goog.userAgent']);\\ngoog.addDependency(\\\"promise\\/thenable.js\\\", ['goog.Thenable'], []);\\ngoog.addDependency(\\\"async\\/freelist.js\\\", ['goog.async.FreeList'], []);\\ngoog.addDependency(\\\"async\\/workqueue.js\\\", ['goog.async.WorkItem', 'goog.async.WorkQueue'], ['goog.asserts', 'goog.async.FreeList']);\\ngoog.addDependency(\\\"debug\\/entrypointregistry.js\\\", ['goog.debug.EntryPointMonitor', 'goog.debug.entryPointRegistry'], ['goog.asserts']);\\ngoog.addDependency(\\\"dom\\/htmlelement.js\\\", ['goog.dom.HtmlElement'], []);\\ngoog.addDependency(\\\"dom\\/tagname.js\\\", ['goog.dom.TagName'], ['goog.dom.HtmlElement']);\\ngoog.addDependency(\\\"functions\\/functions.js\\\", ['goog.functions'], []);\\ngoog.addDependency(\\\"async\\/nexttick.js\\\", ['goog.async.nextTick', 'goog.async.throwException'], ['goog.debug.entryPointRegistry', 'goog.dom.TagName', 'goog.functions', 'goog.labs.userAgent.browser', 'goog.labs.userAgent.engine']);\\ngoog.addDependency(\\\"async\\/run.js\\\", ['goog.async.run'], ['goog.async.WorkQueue', 'goog.async.nextTick', 'goog.async.throwException']);\\ngoog.addDependency(\\\"promise\\/resolver.js\\\", ['goog.promise.Resolver'], []);\\ngoog.addDependency(\\\"promise\\/promise.js\\\", ['goog.Promise'], ['goog.Thenable', 'goog.asserts', 'goog.async.FreeList', 'goog.async.run', 'goog.async.throwException', 'goog.debug.Error', 'goog.promise.Resolver']);\\ngoog.addDependency(\\\"disposable\\/idisposable.js\\\", ['goog.disposable.IDisposable'], []);\\ngoog.addDependency(\\\"disposable\\/disposable.js\\\", ['goog.Disposable', 'goog.dispose', 'goog.disposeAll'], ['goog.disposable.IDisposable']);\\ngoog.addDependency(\\\"events\\/browserfeature.js\\\", ['goog.events.BrowserFeature'], ['goog.userAgent']);\\ngoog.addDependency(\\\"events\\/eventid.js\\\", ['goog.events.EventId'], []);\\ngoog.addDependency(\\\"events\\/event.js\\\", ['goog.events.Event', 'goog.events.EventLike'], ['goog.Disposable', 'goog.events.EventId']);\\ngoog.addDependency(\\\"events\\/eventtype.js\\\", ['goog.events.EventType'], ['goog.userAgent']);\\ngoog.addDependency(\\\"events\\/browserevent.js\\\", ['goog.events.BrowserEvent', 'goog.events.BrowserEvent.MouseButton'], ['goog.events.BrowserFeature', 'goog.events.Event', 'goog.events.EventType', 'goog.reflect', 'goog.userAgent']);\\ngoog.addDependency(\\\"events\\/listenable.js\\\", ['goog.events.Listenable', 'goog.events.ListenableKey'], ['goog.events.EventId']);\\ngoog.addDependency(\\\"events\\/listener.js\\\", ['goog.events.Listener'], ['goog.events.ListenableKey']);\\ngoog.addDependency(\\\"events\\/listenermap.js\\\", ['goog.events.ListenerMap'], ['goog.array', 'goog.events.Listener', 'goog.object']);\\ngoog.addDependency(\\\"events\\/events.js\\\", ['goog.events', 'goog.events.CaptureSimulationMode', 'goog.events.Key', 'goog.events.ListenableType'], ['goog.asserts', 'goog.debug.entryPointRegistry', 'goog.events.BrowserEvent', 'goog.events.BrowserFeature', 'goog.events.Listenable', 'goog.events.ListenerMap']);\\ngoog.addDependency(\\\"events\\/eventtarget.js\\\", ['goog.events.EventTarget'], ['goog.Disposable', 'goog.asserts', 'goog.events', 'goog.events.Event', 'goog.events.Listenable', 'goog.events.ListenerMap', 'goog.object']);\\ngoog.addDependency(\\\"timer\\/timer.js\\\", ['goog.Timer'], ['goog.Promise', 'goog.events.EventTarget']);\\ngoog.addDependency(\\\"json\\/json.js\\\", ['goog.json', 'goog.json.Replacer', 'goog.json.Reviver', 'goog.json.Serializer'], []);\\ngoog.addDependency(\\\"json\\/hybrid.js\\\", ['goog.json.hybrid'], ['goog.asserts', 'goog.json']);\\ngoog.addDependency(\\\"debug\\/errorcontext.js\\\", ['goog.debug.errorcontext'], []);\\ngoog.addDependency(\\\"debug\\/debug.js\\\", ['goog.debug'], ['goog.array', 'goog.debug.errorcontext', 'goog.userAgent']);\\ngoog.addDependency(\\\"debug\\/logrecord.js\\\", ['goog.debug.LogRecord'], []);\\ngoog.addDependency(\\\"debug\\/logbuffer.js\\\", ['goog.debug.LogBuffer'], ['goog.asserts', 'goog.debug.LogRecord']);\\ngoog.addDependency(\\\"debug\\/logger.js\\\", ['goog.debug.LogManager', 'goog.debug.Loggable', 'goog.debug.Logger', 'goog.debug.Logger.Level'], ['goog.array', 'goog.asserts', 'goog.debug', 'goog.debug.LogBuffer', 'goog.debug.LogRecord']);\\ngoog.addDependency(\\\"log\\/log.js\\\", ['goog.log', 'goog.log.Level', 'goog.log.LogRecord', 'goog.log.Logger'], ['goog.debug', 'goog.debug.LogManager', 'goog.debug.LogRecord', 'goog.debug.Logger']);\\ngoog.addDependency(\\\"net\\/errorcode.js\\\", ['goog.net.ErrorCode'], []);\\ngoog.addDependency(\\\"net\\/eventtype.js\\\", ['goog.net.EventType'], []);\\ngoog.addDependency(\\\"net\\/httpstatus.js\\\", ['goog.net.HttpStatus'], []);\\ngoog.addDependency(\\\"net\\/xhrlike.js\\\", ['goog.net.XhrLike'], []);\\ngoog.addDependency(\\\"net\\/xmlhttpfactory.js\\\", ['goog.net.XmlHttpFactory'], ['goog.net.XhrLike']);\\ngoog.addDependency(\\\"net\\/wrapperxmlhttpfactory.js\\\", ['goog.net.WrapperXmlHttpFactory'], ['goog.net.XhrLike', 'goog.net.XmlHttpFactory']);\\ngoog.addDependency(\\\"net\\/xmlhttp.js\\\", ['goog.net.DefaultXmlHttpFactory', 'goog.net.XmlHttp', 'goog.net.XmlHttp.OptionType', 'goog.net.XmlHttp.ReadyState', 'goog.net.XmlHttpDefines'], ['goog.asserts', 'goog.net.WrapperXmlHttpFactory', 'goog.net.XmlHttpFactory']);\\ngoog.addDependency(\\\"structs\\/structs.js\\\", ['goog.structs'], ['goog.array', 'goog.object']);\\ngoog.addDependency(\\\"math\\/math.js\\\", ['goog.math'], ['goog.array', 'goog.asserts']);\\ngoog.addDependency(\\\"iter\\/iter.js\\\", ['goog.iter', 'goog.iter.Iterable', 'goog.iter.Iterator', 'goog.iter.StopIteration'], ['goog.array', 'goog.asserts', 'goog.functions', 'goog.math']);\\ngoog.addDependency(\\\"structs\\/map.js\\\", ['goog.structs.Map'], ['goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.object']);\\ngoog.addDependency(\\\"uri\\/utils.js\\\", ['goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.QueryArray', 'goog.uri.utils.QueryValue', 'goog.uri.utils.StandardQueryParam'], ['goog.array', 'goog.asserts', 'goog.string']);\\ngoog.addDependency(\\\"net\\/xhrio.js\\\", ['goog.net.XhrIo', 'goog.net.XhrIo.ResponseType'], ['goog.Timer', 'goog.array', 'goog.asserts', 'goog.debug.entryPointRegistry', 'goog.events.EventTarget', 'goog.json.hybrid', 'goog.log', 'goog.net.ErrorCode', 'goog.net.EventType', 'goog.net.HttpStatus', 'goog.net.XmlHttp', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.userAgent']);\\ngoog.addDependency(\\\"debug\\/relativetimeprovider.js\\\", ['goog.debug.RelativeTimeProvider'], []);\\ngoog.addDependency(\\\"dom\\/tags.js\\\", ['goog.dom.tags'], ['goog.object']);\\ngoog.addDependency(\\\"string\\/typedstring.js\\\", ['goog.string.TypedString'], []);\\ngoog.addDependency(\\\"string\\/const.js\\\", ['goog.string.Const'], ['goog.asserts', 'goog.string.TypedString']);\\ngoog.addDependency(\\\"html\\/safescript.js\\\", ['goog.html.SafeScript'], ['goog.asserts', 'goog.string.Const', 'goog.string.TypedString']);\\ngoog.addDependency(\\\"fs\\/url.js\\\", ['goog.fs.url'], []);\\ngoog.addDependency(\\\"i18n\\/bidi.js\\\", ['goog.i18n.bidi', 'goog.i18n.bidi.Dir', 'goog.i18n.bidi.DirectionalString', 'goog.i18n.bidi.Format'], []);\\ngoog.addDependency(\\\"html\\/trustedresourceurl.js\\\", ['goog.html.TrustedResourceUrl'], ['goog.asserts', 'goog.i18n.bidi.Dir', 'goog.i18n.bidi.DirectionalString', 'goog.string.Const', 'goog.string.TypedString']);\\ngoog.addDependency(\\\"html\\/safeurl.js\\\", ['goog.html.SafeUrl'], ['goog.asserts', 'goog.fs.url', 'goog.html.TrustedResourceUrl', 'goog.i18n.bidi.Dir', 'goog.i18n.bidi.DirectionalString', 'goog.string', 'goog.string.Const', 'goog.string.TypedString']);\\ngoog.addDependency(\\\"html\\/safestyle.js\\\", ['goog.html.SafeStyle'], ['goog.array', 'goog.asserts', 'goog.html.SafeUrl', 'goog.string', 'goog.string.Const', 'goog.string.TypedString']);\\ngoog.addDependency(\\\"html\\/safestylesheet.js\\\", ['goog.html.SafeStyleSheet'], ['goog.array', 'goog.asserts', 'goog.html.SafeStyle', 'goog.object', 'goog.string', 'goog.string.Const', 'goog.string.TypedString']);\\ngoog.addDependency(\\\"html\\/safehtml.js\\\", ['goog.html.SafeHtml'], ['goog.array', 'goog.asserts', 'goog.dom.TagName', 'goog.dom.tags', 'goog.html.SafeScript', 'goog.html.SafeStyle', 'goog.html.SafeStyleSheet', 'goog.html.SafeUrl', 'goog.html.TrustedResourceUrl', 'goog.i18n.bidi.Dir', 'goog.i18n.bidi.DirectionalString', 'goog.labs.userAgent.browser', 'goog.object', 'goog.string', 'goog.string.Const', 'goog.string.TypedString']);\\ngoog.addDependency(\\\"html\\/uncheckedconversions.js\\\", ['goog.html.uncheckedconversions'], ['goog.asserts', 'goog.html.SafeHtml', 'goog.html.SafeScript', 'goog.html.SafeStyle', 'goog.html.SafeStyleSheet', 'goog.html.SafeUrl', 'goog.html.TrustedResourceUrl', 'goog.string', 'goog.string.Const']);\\ngoog.addDependency(\\\"debug\\/formatter.js\\\", ['goog.debug.Formatter', 'goog.debug.HtmlFormatter', 'goog.debug.TextFormatter'], ['goog.debug', 'goog.debug.Logger', 'goog.debug.RelativeTimeProvider', 'goog.html.SafeHtml', 'goog.html.SafeUrl', 'goog.html.uncheckedconversions', 'goog.string.Const']);\\ngoog.addDependency(\\\"debug\\/console.js\\\", ['goog.debug.Console'], ['goog.debug.LogManager', 'goog.debug.Logger', 'goog.debug.TextFormatter']);\\ngoog.addDependency(\\\"storage\\/mechanism\\/errorcode.js\\\", ['goog.storage.mechanism.ErrorCode'], []);\\ngoog.addDependency(\\\"storage\\/mechanism\\/mechanism.js\\\", ['goog.storage.mechanism.Mechanism'], []);\\ngoog.addDependency(\\\"storage\\/mechanism\\/iterablemechanism.js\\\", ['goog.storage.mechanism.IterableMechanism'], ['goog.array', 'goog.asserts', 'goog.iter', 'goog.storage.mechanism.Mechanism']);\\ngoog.addDependency(\\\"storage\\/mechanism\\/html5webstorage.js\\\", ['goog.storage.mechanism.HTML5WebStorage'], ['goog.asserts', 'goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.storage.mechanism.ErrorCode', 'goog.storage.mechanism.IterableMechanism']);\\ngoog.addDependency(\\\"storage\\/mechanism\\/html5sessionstorage.js\\\", ['goog.storage.mechanism.HTML5SessionStorage'], ['goog.storage.mechanism.HTML5WebStorage']);\\ngoog.addDependency(\\\"uri\\/uri.js\\\", ['goog.Uri', 'goog.Uri.QueryData'], ['goog.array', 'goog.asserts', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.StandardQueryParam']);\\ngoog.addDependency(\\\"mochikit\\/async\\/deferred.js\\\", ['goog.async.Deferred', 'goog.async.Deferred.AlreadyCalledError', 'goog.async.Deferred.CanceledError'], ['goog.Promise', 'goog.Thenable', 'goog.array', 'goog.asserts', 'goog.debug.Error']);\\ngoog.addDependency(\\\"dom\\/browserfeature.js\\\", ['goog.dom.BrowserFeature'], ['goog.userAgent']);\\ngoog.addDependency(\\\"dom\\/asserts.js\\\", ['goog.dom.asserts'], ['goog.asserts']);\\ngoog.addDependency(\\\"dom\\/safe.js\\\", ['goog.dom.safe', 'goog.dom.safe.InsertAdjacentHtmlPosition'], ['goog.asserts', 'goog.dom.asserts', 'goog.html.SafeHtml', 'goog.html.SafeScript', 'goog.html.SafeStyle', 'goog.html.SafeUrl', 'goog.html.TrustedResourceUrl', 'goog.string', 'goog.string.Const']);\\ngoog.addDependency(\\\"math\\/coordinate.js\\\", ['goog.math.Coordinate'], ['goog.math']);\\ngoog.addDependency(\\\"math\\/size.js\\\", ['goog.math.Size'], []);\\ngoog.addDependency(\\\"dom\\/dom.js\\\", ['goog.dom', 'goog.dom.Appendable', 'goog.dom.DomHelper'], ['goog.array', 'goog.asserts', 'goog.dom.BrowserFeature', 'goog.dom.NodeType', 'goog.dom.TagName', 'goog.dom.safe', 'goog.html.SafeHtml', 'goog.html.uncheckedconversions', 'goog.math.Coordinate', 'goog.math.Size', 'goog.object', 'goog.string', 'goog.string.Unicode', 'goog.userAgent']);\\ngoog.addDependency(\\\"net\\/jsloader.js\\\", ['goog.net.jsloader', 'goog.net.jsloader.Error', 'goog.net.jsloader.ErrorCode', 'goog.net.jsloader.Options'], ['goog.array', 'goog.async.Deferred', 'goog.debug.Error', 'goog.dom', 'goog.dom.TagName', 'goog.dom.safe', 'goog.html.TrustedResourceUrl', 'goog.object']);\\ngoog.addDependency(\\\"math\\/integer.js\\\", ['goog.math.Integer'], []);\\ngoog.addDependency(\\\"string\\/stringbuffer.js\\\", ['goog.string.StringBuffer'], []);\\ngoog.addDependency(\\\"math\\/long.js\\\", ['goog.math.Long'], ['goog.asserts', 'goog.reflect']);\\ngoog.addDependency(\\\"..\\/cljs\\/core.js\\\", ['cljs.core'], ['goog.string', 'goog.Uri', 'goog.object', 'goog.math.Integer', 'goog.string.StringBuffer', 'goog.array', 'goog.math.Long']);\\ngoog.addDependency(\\\"html\\/legacyconversions.js\\\", ['goog.html.legacyconversions'], ['goog.html.SafeHtml', 'goog.html.SafeScript', 'goog.html.SafeStyle', 'goog.html.SafeStyleSheet', 'goog.html.SafeUrl', 'goog.html.TrustedResourceUrl']);\\ngoog.addDependency(\\\"storage\\/mechanism\\/html5localstorage.js\\\", ['goog.storage.mechanism.HTML5LocalStorage'], ['goog.storage.mechanism.HTML5WebStorage']);\\ngoog.addDependency(\\\"storage\\/mechanism\\/ieuserdata.js\\\", ['goog.storage.mechanism.IEUserData'], ['goog.asserts', 'goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.storage.mechanism.ErrorCode', 'goog.storage.mechanism.IterableMechanism', 'goog.structs.Map', 'goog.userAgent']);\\ngoog.addDependency(\\\"storage\\/mechanism\\/prefixedmechanism.js\\\", ['goog.storage.mechanism.PrefixedMechanism'], ['goog.iter.Iterator', 'goog.storage.mechanism.IterableMechanism']);\\ngoog.addDependency(\\\"storage\\/mechanism\\/mechanismfactory.js\\\", ['goog.storage.mechanism.mechanismfactory'], ['goog.storage.mechanism.HTML5LocalStorage', 'goog.storage.mechanism.HTML5SessionStorage', 'goog.storage.mechanism.IEUserData', 'goog.storage.mechanism.PrefixedMechanism']);\\ngoog.addDependency(\\\"net\\/websocket.js\\\", ['goog.net.WebSocket', 'goog.net.WebSocket.ErrorEvent', 'goog.net.WebSocket.EventType', 'goog.net.WebSocket.MessageEvent'], ['goog.Timer', 'goog.asserts', 'goog.debug.entryPointRegistry', 'goog.events', 'goog.events.Event', 'goog.events.EventTarget', 'goog.log']);\\ngoog.addDependency(\\\"..\\/clojure\\/string.js\\\", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);\\ngoog.addDependency(\\\"..\\/figwheel\\/repl.js\\\", ['figwheel.repl'], ['goog.userAgent.product', 'goog.net.XhrIo', 'goog.json', 'goog.string', 'goog.debug.Console', 'goog.storage.mechanism.HTML5SessionStorage', 'goog.Uri.QueryData', 'goog.net.jsloader', 'goog.Uri', 'cljs.core', 'goog.object', 'goog.log', 'goog.html.legacyconversions', 'goog.Promise', 'goog.storage.mechanism.mechanismfactory', 'goog.net.WebSocket', 'clojure.string', 'goog.array']);\\n\",\"uuid\":\"7a8b292c-7233-4db2-9ada-1d118e08e560\"}")
+TRACE t12733: | | | | | | | | | | | | | => nil
+TRACE t12730: | | | | | | | | | | | | => nil
+TRACE t12729: | | | | | | | | | | | => #object[clojure.core$promise$reify__8501 0x60b1df88 {:status :pending, :val nil}]
+TRACE t12728: | | | | | | | | | | => #object[clojure.core$promise$reify__8501 0x60b1df88 {:status :pending, :val nil}]
+TRACE t12734: (figwheel.repl/receive-message! "{:session-id \"7d632e20-0615-407e-bf18-8b6721aa21e6\", :session-name \"Cathy\", :response {:status :success, :out \"\", :ua-product :firefox, :value \"nil\"}, :uuid \"7a8b292c-7233-4db2-9ada-1d118e08e560\"}")
+TRACE t12735: | (figwheel.repl/remove-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x23f76d41 "figwheel.repl$send_for_response_STAR_$listen__3980@23f76d41"])
+TRACE t12735: | => nil
+TRACE t12734: => nil
+TRACE t12721: | | | | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t12720: | | | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t12715: | | | | | | | => (#cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# ...)
+TRACE t12736: | | | | | | | (cljs.repl/load-namespace #figwheel.repl.FigwheelReplEnv# figwheel.main ...)
+TRACE t12737: | | | | | | | | (cljs.repl/ns->input figwheel.main #)
+TRACE t12737: | | | | | | | | => {:ns figwheel.main, :provides #, :requires #, ...}
+TRACE t12738: | | | | | | | | (cljs.repl/compilable? #)
+TRACE t12738: | | | | | | | | => true
+TRACE t12739: | | | | | | | | (cljs.repl/env->opts #figwheel.repl.FigwheelReplEnv#)
+TRACE t12740: | | | | | | | | | (cljs.repl/env->opts #figwheel.repl.FigwheelReplEnv# nil)
+TRACE t12740: | | | | | | | | | => {:output-dir ".repl", :bound-printer #object[clojure.lang.Atom 0x759c0c14 #], :broadcast false, ...}
+TRACE t12739: | | | | | | | | => {:output-dir ".repl", :bound-printer #object[clojure.lang.Atom 0x759c0c14 #], :broadcast false, ...}
+TRACE t12741: | | | | | | | | (cljs.repl/load-sources #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12742: | | | | | | | | | (figwheel.repl/evaluate #figwheel.repl.FigwheelReplEnv# "goog.addDependency(\"string/string.js\", ['goog.string', 'goog.string.Unicode'], []);\ngoog.addDependency(\"debug/error.js\", ['goog.debug.Error'], []);\ngoog.addDependency(\"dom/nodetype.js\", ['goog.dom.NodeType'], []);\ngoog.addDependency(\"asserts/asserts.js\", ['goog.asserts', 'goog.asserts.AssertionError'], ['goog.debug.Error', 'goog.dom.NodeType', 'goog.string']);\ngoog.addDependency(\"array/array.js\", ['goog.array'], ['goog.asserts']);\ngoog.addDependency(\"object/object.js\", ['goog.object'], []);\ngoog.addDependency(\"structs/structs.js\", ['goog.structs'], ['goog.array', 'goog.object']);\ngoog.addDependency(\"functions/functions.js\", ['goog.functions'], []);\ngoog.addDependency(\"math/math.js\", ['goog.math'], ['goog.array', 'goog.asserts']);\ngoog.addDependency(\"iter/iter.js\", ['goog.iter', 'goog.iter.Iterable', 'goog.iter.Iterator', 'goog.iter.StopIteration'], ['goog.array', 'goog.asserts', 'goog.functions', 'goog.math']);\ngoog.addDependency(\"structs/map.js\", ['goog.structs.Map'], ['goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.object']);\ngoog.addDependency(\"uri/utils.js\", ['goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.QueryArray', 'goog.uri.utils.QueryValue', 'goog.uri.utils.StandardQueryParam'], ['goog.array', 'goog.asserts', 'goog.string']);\ngoog.addDependency(\"uri/uri.js\", ['goog.Uri', 'goog.Uri.QueryData'], ['goog.array', 'goog.asserts', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.StandardQueryParam']);\ngoog.addDependency(\"math/integer.js\", ['goog.math.Integer'], []);\ngoog.addDependency(\"string/stringbuffer.js\", ['goog.string.StringBuffer'], []);\ngoog.addDependency(\"reflect/reflect.js\", ['goog.reflect'], []);\ngoog.addDependency(\"math/long.js\", ['goog.math.Long'], ['goog.asserts', 'goog.reflect']);\ngoog.addDependency(\"../cljs/core.js\", ['cljs.core'], ['goog.string', 'goog.Uri', 'goog.object', 'goog.math.Integer', 'goog.string.StringBuffer', 'goog.array', 'goog.math.Long']);\ngoog.addDependency(\"../figwheel/main.js\", ['figwheel.main'], ['cljs.core']);\n")
+TRACE t12743: | | | | | | | | | | (figwheel.repl/wait-for-connection #figwheel.repl.FigwheelReplEnv#)
+TRACE t12744: | | | | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12745: | | | | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12745: | | | | | | | | | | | | => (#)
+TRACE t12744: | | | | | | | | | | | => (#)
+TRACE t12743: | | | | | | | | | | => nil
+TRACE t12746: | | | | | | | | | | (figwheel.repl/eval-connections #figwheel.repl.FigwheelReplEnv#)
+TRACE t12747: | | | | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t12748: | | | | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t12748: | | | | | | | | | | | | => (#)
+TRACE t12747: | | | | | | | | | | | => (#)
+TRACE t12746: | | | | | | | | | | => (#)
+TRACE t12749: | | | | | | | | | | (figwheel.repl/send-for-eval #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t12750: | | | | | | | | | | | (figwheel.repl/send-for-response # #)
+TRACE t12751: | | | | | | | | | | | | (figwheel.repl/send-for-response* #object[clojure.core$promise$reify__8501 0x22e0965c #] # ...)
+TRACE t12752: | | | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x792ae10d "figwheel.repl$send_for_response_STAR_$listen__3980@792ae10d"])
+TRACE t12753: | | | | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x792ae10d "figwheel.repl$send_for_response_STAR_$listen__3980@792ae10d"] #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x792ae10d "figwheel.repl$send_for_response_STAR_$listen__3980@792ae10d"])
+TRACE t12753: | | | | | | | | | | | | | | => nil
+TRACE t12752: | | | | | | | | | | | | | => nil
+TRACE t12754: | | | | | | | | | | | | | (figwheel.repl/connection-send # "{\"session-id\":\"7d632e20-0615-407e-bf18-8b6721aa21e6\",\"session-name\":\"Cathy\",\"op\":\"eval\",\"code\":\"goog.addDependency(\\\"string\\/string.js\\\", ['goog.string', 'goog.string.Unicode'], []);\\ngoog.addDependency(\\\"debug\\/error.js\\\", ['goog.debug.Error'], []);\\ngoog.addDependency(\\\"dom\\/nodetype.js\\\", ['goog.dom.NodeType'], []);\\ngoog.addDependency(\\\"asserts\\/asserts.js\\\", ['goog.asserts', 'goog.asserts.AssertionError'], ['goog.debug.Error', 'goog.dom.NodeType', 'goog.string']);\\ngoog.addDependency(\\\"array\\/array.js\\\", ['goog.array'], ['goog.asserts']);\\ngoog.addDependency(\\\"object\\/object.js\\\", ['goog.object'], []);\\ngoog.addDependency(\\\"structs\\/structs.js\\\", ['goog.structs'], ['goog.array', 'goog.object']);\\ngoog.addDependency(\\\"functions\\/functions.js\\\", ['goog.functions'], []);\\ngoog.addDependency(\\\"math\\/math.js\\\", ['goog.math'], ['goog.array', 'goog.asserts']);\\ngoog.addDependency(\\\"iter\\/iter.js\\\", ['goog.iter', 'goog.iter.Iterable', 'goog.iter.Iterator', 'goog.iter.StopIteration'], ['goog.array', 'goog.asserts', 'goog.functions', 'goog.math']);\\ngoog.addDependency(\\\"structs\\/map.js\\\", ['goog.structs.Map'], ['goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.object']);\\ngoog.addDependency(\\\"uri\\/utils.js\\\", ['goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.QueryArray', 'goog.uri.utils.QueryValue', 'goog.uri.utils.StandardQueryParam'], ['goog.array', 'goog.asserts', 'goog.string']);\\ngoog.addDependency(\\\"uri\\/uri.js\\\", ['goog.Uri', 'goog.Uri.QueryData'], ['goog.array', 'goog.asserts', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.StandardQueryParam']);\\ngoog.addDependency(\\\"math\\/integer.js\\\", ['goog.math.Integer'], []);\\ngoog.addDependency(\\\"string\\/stringbuffer.js\\\", ['goog.string.StringBuffer'], []);\\ngoog.addDependency(\\\"reflect\\/reflect.js\\\", ['goog.reflect'], []);\\ngoog.addDependency(\\\"math\\/long.js\\\", ['goog.math.Long'], ['goog.asserts', 'goog.reflect']);\\ngoog.addDependency(\\\"..\\/cljs\\/core.js\\\", ['cljs.core'], ['goog.string', 'goog.Uri', 'goog.object', 'goog.math.Integer', 'goog.string.StringBuffer', 'goog.array', 'goog.math.Long']);\\ngoog.addDependency(\\\"..\\/figwheel\\/main.js\\\", ['figwheel.main'], ['cljs.core']);\\n\",\"uuid\":\"1a812223-3efe-4b45-815f-6d83a102ec79\"}")
+TRACE t12754: | | | | | | | | | | | | | => nil
+TRACE t12751: | | | | | | | | | | | | => nil
+TRACE t12750: | | | | | | | | | | | => #object[clojure.core$promise$reify__8501 0x22e0965c {:status :pending, :val nil}]
+TRACE t12749: | | | | | | | | | | => #object[clojure.core$promise$reify__8501 0x22e0965c {:status :pending, :val nil}]
+TRACE t12755: (figwheel.repl/receive-message! "{:session-id \"7d632e20-0615-407e-bf18-8b6721aa21e6\", :session-name \"Cathy\", :response {:status :success, :out \"\", :ua-product :firefox, :value \"nil\"}, :uuid \"1a812223-3efe-4b45-815f-6d83a102ec79\"}")
+TRACE t12756: | (figwheel.repl/remove-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x792ae10d "figwheel.repl$send_for_response_STAR_$listen__3980@792ae10d"])
+TRACE t12756: | => nil
+TRACE t12755: => nil
+TRACE t12742: | | | | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t12741: | | | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t12736: | | | | | | | => (#cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# ...)
+TRACE t12757: | | | | | | | (cljs.repl/load-namespace #figwheel.repl.FigwheelReplEnv# cljs.repl ...)
+TRACE t12758: | | | | | | | | (cljs.repl/ns->input cljs.repl #)
+TRACE t12758: | | | | | | | | => {:ns cljs.repl, :provides #, :requires #, ...}
+TRACE t12759: | | | | | | | | (cljs.repl/compilable? #)
+TRACE t12759: | | | | | | | | => true
+TRACE t12760: | | | | | | | | (cljs.repl/env->opts #figwheel.repl.FigwheelReplEnv#)
+TRACE t12761: | | | | | | | | | (cljs.repl/env->opts #figwheel.repl.FigwheelReplEnv# nil)
+TRACE t12761: | | | | | | | | | => {:output-dir ".repl", :bound-printer #object[clojure.lang.Atom 0x759c0c14 #], :broadcast false, ...}
+TRACE t12760: | | | | | | | | => {:output-dir ".repl", :bound-printer #object[clojure.lang.Atom 0x759c0c14 #], :broadcast false, ...}
+TRACE t13771: | | | | | | | | (cljs.repl/load-sources #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t13772: | | | | | | | | | (figwheel.repl/evaluate #figwheel.repl.FigwheelReplEnv# "goog.addDependency(\"string/string.js\", ['goog.string', 'goog.string.Unicode'], []);\ngoog.addDependency(\"debug/error.js\", ['goog.debug.Error'], []);\ngoog.addDependency(\"dom/nodetype.js\", ['goog.dom.NodeType'], []);\ngoog.addDependency(\"asserts/asserts.js\", ['goog.asserts', 'goog.asserts.AssertionError'], ['goog.debug.Error', 'goog.dom.NodeType', 'goog.string']);\ngoog.addDependency(\"array/array.js\", ['goog.array'], ['goog.asserts']);\ngoog.addDependency(\"object/object.js\", ['goog.object'], []);\ngoog.addDependency(\"structs/structs.js\", ['goog.structs'], ['goog.array', 'goog.object']);\ngoog.addDependency(\"functions/functions.js\", ['goog.functions'], []);\ngoog.addDependency(\"math/math.js\", ['goog.math'], ['goog.array', 'goog.asserts']);\ngoog.addDependency(\"iter/iter.js\", ['goog.iter', 'goog.iter.Iterable', 'goog.iter.Iterator', 'goog.iter.StopIteration'], ['goog.array', 'goog.asserts', 'goog.functions', 'goog.math']);\ngoog.addDependency(\"structs/map.js\", ['goog.structs.Map'], ['goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.object']);\ngoog.addDependency(\"uri/utils.js\", ['goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.QueryArray', 'goog.uri.utils.QueryValue', 'goog.uri.utils.StandardQueryParam'], ['goog.array', 'goog.asserts', 'goog.string']);\ngoog.addDependency(\"uri/uri.js\", ['goog.Uri', 'goog.Uri.QueryData'], ['goog.array', 'goog.asserts', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.StandardQueryParam']);\ngoog.addDependency(\"math/integer.js\", ['goog.math.Integer'], []);\ngoog.addDependency(\"string/stringbuffer.js\", ['goog.string.StringBuffer'], []);\ngoog.addDependency(\"reflect/reflect.js\", ['goog.reflect'], []);\ngoog.addDependency(\"math/long.js\", ['goog.math.Long'], ['goog.asserts', 'goog.reflect']);\ngoog.addDependency(\"../cljs/core.js\", ['cljs.core'], ['goog.string', 'goog.Uri', 'goog.object', 'goog.math.Integer', 'goog.string.StringBuffer', 'goog.array', 'goog.math.Long']);\ngoog.addDependency(\"string/stringformat.js\", ['goog.string.format'], ['goog.string']);\ngoog.addDependency(\"../clojure/string.js\", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);\ngoog.addDependency(\"../clojure/walk.js\", ['clojure.walk'], ['cljs.core']);\ngoog.addDependency(\"../cljs/spec/gen/alpha.js\", ['cljs.spec.gen.alpha'], ['goog.Uri', 'cljs.core']);\ngoog.addDependency(\"../cljs/spec/alpha.js\", ['cljs.spec.alpha'], ['cljs.core', 'goog.object', 'clojure.string', 'clojure.walk', 'cljs.spec.gen.alpha']);\ngoog.addDependency(\"../cljs/repl.js\", ['cljs.repl'], ['goog.string', 'cljs.core', 'goog.string.format', 'cljs.spec.alpha']);\n")
+TRACE t13773: | | | | | | | | | | (figwheel.repl/wait-for-connection #figwheel.repl.FigwheelReplEnv#)
+TRACE t13774: | | | | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t13775: | | | | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t13775: | | | | | | | | | | | | => (#)
+TRACE t13774: | | | | | | | | | | | => (#)
+TRACE t13773: | | | | | | | | | | => nil
+TRACE t13776: | | | | | | | | | | (figwheel.repl/eval-connections #figwheel.repl.FigwheelReplEnv#)
+TRACE t13777: | | | | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t13778: | | | | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t13778: | | | | | | | | | | | | => (#)
+TRACE t13777: | | | | | | | | | | | => (#)
+TRACE t13776: | | | | | | | | | | => (#)
+TRACE t13779: | | | | | | | | | | (figwheel.repl/send-for-eval #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t13780: | | | | | | | | | | | (figwheel.repl/send-for-response # #)
+TRACE t13781: | | | | | | | | | | | | (figwheel.repl/send-for-response* #object[clojure.core$promise$reify__8501 0xc24e06a #] # ...)
+TRACE t13782: | | | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x1926e42e "figwheel.repl$send_for_response_STAR_$listen__3980@1926e42e"])
+TRACE t13783: | | | | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x1926e42e "figwheel.repl$send_for_response_STAR_$listen__3980@1926e42e"] #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x1926e42e "figwheel.repl$send_for_response_STAR_$listen__3980@1926e42e"])
+TRACE t13783: | | | | | | | | | | | | | | => nil
+TRACE t13782: | | | | | | | | | | | | | => nil
+TRACE t13784: | | | | | | | | | | | | | (figwheel.repl/connection-send # "{\"session-id\":\"7d632e20-0615-407e-bf18-8b6721aa21e6\",\"session-name\":\"Cathy\",\"op\":\"eval\",\"code\":\"goog.addDependency(\\\"string\\/string.js\\\", ['goog.string', 'goog.string.Unicode'], []);\\ngoog.addDependency(\\\"debug\\/error.js\\\", ['goog.debug.Error'], []);\\ngoog.addDependency(\\\"dom\\/nodetype.js\\\", ['goog.dom.NodeType'], []);\\ngoog.addDependency(\\\"asserts\\/asserts.js\\\", ['goog.asserts', 'goog.asserts.AssertionError'], ['goog.debug.Error', 'goog.dom.NodeType', 'goog.string']);\\ngoog.addDependency(\\\"array\\/array.js\\\", ['goog.array'], ['goog.asserts']);\\ngoog.addDependency(\\\"object\\/object.js\\\", ['goog.object'], []);\\ngoog.addDependency(\\\"structs\\/structs.js\\\", ['goog.structs'], ['goog.array', 'goog.object']);\\ngoog.addDependency(\\\"functions\\/functions.js\\\", ['goog.functions'], []);\\ngoog.addDependency(\\\"math\\/math.js\\\", ['goog.math'], ['goog.array', 'goog.asserts']);\\ngoog.addDependency(\\\"iter\\/iter.js\\\", ['goog.iter', 'goog.iter.Iterable', 'goog.iter.Iterator', 'goog.iter.StopIteration'], ['goog.array', 'goog.asserts', 'goog.functions', 'goog.math']);\\ngoog.addDependency(\\\"structs\\/map.js\\\", ['goog.structs.Map'], ['goog.iter.Iterator', 'goog.iter.StopIteration', 'goog.object']);\\ngoog.addDependency(\\\"uri\\/utils.js\\\", ['goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.QueryArray', 'goog.uri.utils.QueryValue', 'goog.uri.utils.StandardQueryParam'], ['goog.array', 'goog.asserts', 'goog.string']);\\ngoog.addDependency(\\\"uri\\/uri.js\\\", ['goog.Uri', 'goog.Uri.QueryData'], ['goog.array', 'goog.asserts', 'goog.string', 'goog.structs', 'goog.structs.Map', 'goog.uri.utils', 'goog.uri.utils.ComponentIndex', 'goog.uri.utils.StandardQueryParam']);\\ngoog.addDependency(\\\"math\\/integer.js\\\", ['goog.math.Integer'], []);\\ngoog.addDependency(\\\"string\\/stringbuffer.js\\\", ['goog.string.StringBuffer'], []);\\ngoog.addDependency(\\\"reflect\\/reflect.js\\\", ['goog.reflect'], []);\\ngoog.addDependency(\\\"math\\/long.js\\\", ['goog.math.Long'], ['goog.asserts', 'goog.reflect']);\\ngoog.addDependency(\\\"..\\/cljs\\/core.js\\\", ['cljs.core'], ['goog.string', 'goog.Uri', 'goog.object', 'goog.math.Integer', 'goog.string.StringBuffer', 'goog.array', 'goog.math.Long']);\\ngoog.addDependency(\\\"string\\/stringformat.js\\\", ['goog.string.format'], ['goog.string']);\\ngoog.addDependency(\\\"..\\/clojure\\/string.js\\\", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);\\ngoog.addDependency(\\\"..\\/clojure\\/walk.js\\\", ['clojure.walk'], ['cljs.core']);\\ngoog.addDependency(\\\"..\\/cljs\\/spec\\/gen\\/alpha.js\\\", ['cljs.spec.gen.alpha'], ['goog.Uri', 'cljs.core']);\\ngoog.addDependency(\\\"..\\/cljs\\/spec\\/alpha.js\\\", ['cljs.spec.alpha'], ['cljs.core', 'goog.object', 'clojure.string', 'clojure.walk', 'cljs.spec.gen.alpha']);\\ngoog.addDependency(\\\"..\\/cljs\\/repl.js\\\", ['cljs.repl'], ['goog.string', 'cljs.core', 'goog.string.format', 'cljs.spec.alpha']);\\n\",\"uuid\":\"aad0cac0-8190-48e3-8420-54e91de57537\"}")
+TRACE t13784: | | | | | | | | | | | | | => nil
+TRACE t13781: | | | | | | | | | | | | => nil
+TRACE t13780: | | | | | | | | | | | => #object[clojure.core$promise$reify__8501 0xc24e06a {:status :pending, :val nil}]
+TRACE t13779: | | | | | | | | | | => #object[clojure.core$promise$reify__8501 0xc24e06a {:status :pending, :val nil}]
+TRACE t13785: (figwheel.repl/receive-message! "{:session-id \"7d632e20-0615-407e-bf18-8b6721aa21e6\", :session-name \"Cathy\", :response {:status :success, :out \"\", :ua-product :firefox, :value \"nil\"}, :uuid \"aad0cac0-8190-48e3-8420-54e91de57537\"}")
+TRACE t13772: | | | | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t13786: | (figwheel.repl/remove-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x1926e42e "figwheel.repl$send_for_response_STAR_$listen__3980@1926e42e"])
+TRACE t13771: | | | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t13786: | => nil
+TRACE t13785: => nil
+TRACE t12757: | | | | | | | => (#cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# ...)
+TRACE t12693: | | | | | | => (#cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# #cljs.closure.JavaScriptFile# ...)
+TRACE t13787: | | | | | | (cljs.repl/load-cljs-loader #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t13787: | | | | | | => nil
+TRACE t13788: | | | | | | (figwheel.repl/evaluate #figwheel.repl.FigwheelReplEnv# "goog.provide('cljs.user');\ngoog.require('cljs.core');\ngoog.require('figwheel.repl');\ngoog.require('figwheel.main');\ngoog.require('cljs.pprint');\ngoog.require('cljs.repl');\n")
+TRACE t13789: | | | | | | | (figwheel.repl/wait-for-connection #figwheel.repl.FigwheelReplEnv#)
+TRACE t13790: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t13791: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t13791: | | | | | | | | | => (#)
+TRACE t13790: | | | | | | | | => (#)
+TRACE t13789: | | | | | | | => nil
+TRACE t13792: | | | | | | | (figwheel.repl/eval-connections #figwheel.repl.FigwheelReplEnv#)
+TRACE t13793: | | | | | | | | (figwheel.repl/connections-available #figwheel.repl.FigwheelReplEnv#)
+TRACE t13794: | | | | | | | | | (figwheel.repl/open-connections)
+TRACE t13794: | | | | | | | | | => (#)
+TRACE t13793: | | | | | | | | => (#)
+TRACE t13792: | | | | | | | => (#)
+TRACE t13795: | | | | | | | (figwheel.repl/send-for-eval #figwheel.repl.FigwheelReplEnv# # ...)
+TRACE t13796: | | | | | | | | (figwheel.repl/send-for-response # #)
+TRACE t13797: | | | | | | | | | (figwheel.repl/send-for-response* #object[clojure.core$promise$reify__8501 0x3ecba23a #] # ...)
+TRACE t13798: | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x4d40fe37 "figwheel.repl$send_for_response_STAR_$listen__3980@4d40fe37"])
+TRACE t13799: | | | | | | | | | | | (figwheel.repl/add-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x4d40fe37 "figwheel.repl$send_for_response_STAR_$listen__3980@4d40fe37"] #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x4d40fe37 "figwheel.repl$send_for_response_STAR_$listen__3980@4d40fe37"])
+TRACE t13799: | | | | | | | | | | | => nil
+TRACE t13798: | | | | | | | | | | => nil
+TRACE t13800: | | | | | | | | | | (figwheel.repl/connection-send # "{\"session-id\":\"7d632e20-0615-407e-bf18-8b6721aa21e6\",\"session-name\":\"Cathy\",\"op\":\"eval\",\"code\":\"goog.provide('cljs.user');\\ngoog.require('cljs.core');\\ngoog.require('figwheel.repl');\\ngoog.require('figwheel.main');\\ngoog.require('cljs.pprint');\\ngoog.require('cljs.repl');\\n\",\"uuid\":\"b371bfab-bb44-46fe-adfb-bbbc527b00d9\"}")
+TRACE t13800: | | | | | | | | | | => nil
+TRACE t13797: | | | | | | | | | => nil
+TRACE t13796: | | | | | | | | => #object[clojure.core$promise$reify__8501 0x3ecba23a {:status :pending, :val nil}]
+TRACE t13795: | | | | | | | => #object[clojure.core$promise$reify__8501 0x3ecba23a {:status :pending, :val nil}]
+TRACE t13801: (figwheel.repl/receive-message! "{:session-id \"7d632e20-0615-407e-bf18-8b6721aa21e6\", :session-name \"Cathy\", :response {:status :success, :out \"\", :ua-product :firefox, :value \"nil\"}, :uuid \"b371bfab-bb44-46fe-adfb-bbbc527b00d9\"}")
+TRACE t13788: | | | | | | => {:status :success, :out "", :ua-product :firefox, ...}
+TRACE t12690: | | | | | => "nil"
+TRACE t13803: | | | | | (cljs.repl/run-inits #figwheel.repl.FigwheelReplEnv# #)
+TRACE t13802: | (figwheel.repl/remove-listener #object[figwheel.repl$send_for_response_STAR_$listen__3980 0x4d40fe37 "figwheel.repl$send_for_response_STAR_$listen__3980@4d40fe37"])
+TRACE t13802: | => nil
+TRACE t13801: => nil
+TRACE t13803: | | | | | => nil
+TRACE t13804: | | | | | (cljs.repl/initial-prompt #object[clojure.tools.trace$trace_var_STAR_$fn__329$tracing_wrapper__330 0x379ebdf "clojure.tools.trace$trace_var_STAR_$fn__329$tracing_wrapper__330@379ebdf"] #object[clojure.tools.trace$trace_var_STAR_$fn__329$tracing_wrapper__330 0x286566f "clojure.tools.trace$trace_var_STAR_$fn__329$tracing_wrapper__330@286566f"])
+TRACE t13805: | | | | | | (cljs.repl/repl-title)
+ClojureScript 1.10.520
+TRACE t13805: | | | | | | => nil
+TRACE t13806: | | | | | | (cljs.repl/repl-prompt)
+cljs.user=> TRACE t13806: | | | | | | => nil
+TRACE t13804: | | | | | => nil
+TRACE t13807: | | | | | (cljs.repl/repl-read #object[java.lang.Object 0x5c0b55bc "java.lang.Object@5c0b55bc"] #object[java.lang.Object 0x5abe46b7 "java.lang.Object@5abe46b7"])
+TRACE t13808: | | | | | | (cljs.repl/repl-read #object[java.lang.Object 0x5c0b55bc "java.lang.Object@5c0b55bc"] #object[java.lang.Object 0x5abe46b7 "java.lang.Object@5abe46b7"] ...)
+TRACE t13809: | | | | | | | (cljs.repl/skip-whitespace #object[clojure.tools.reader.reader_types.SourceLoggingPushbackReader 0x66a81c48 "clojure.tools.reader.reader_types.SourceLoggingPushbackReader@66a81c48"])
