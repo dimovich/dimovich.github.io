@@ -1,0 +1,219 @@
+TRACE t7890: (figwheel.main/-main "-b" "dev" ...)
+TRACE t7891: | (figwheel.main/get-edn-file-key "figwheel-main.edn" :log-level)
+TRACE t7892: | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :log-level ...)
+TRACE t7892: | | => nil
+TRACE t7891: | => nil
+TRACE t7893: | (figwheel.main/fix-simple-bool-args # #)
+TRACE t7893: | => ("-b" "dev" "-r")
+TRACE t7894: | (figwheel.main/validate-cli! #)
+TRACE t7895: | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-cli ...)
+TRACE t7895: | | => true
+TRACE t7896: | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :ansi-color-output ...)
+TRACE t7896: | | => true
+TRACE t7894: | => nil
+TRACE t7897: | (figwheel.repl/repl-env* nil)
+TRACE t7897: | => #figwheel.repl.FigwheelReplEnv{:bound-printer #object[clojure.lang.Atom 0x50fd7d94 #], :broadcast false, :out-print-fn nil, ...}
+TRACE t7898: | (cljs.repl/repl-options #figwheel.repl.FigwheelReplEnv#)
+TRACE t7898: | => {:preloads #, :cljs.cli/commands #, :cljs.cli/main #object[clojure.tools.trace$trace_var_STAR_$fn__329$tracing_wrapper__330 0x8dba70a "clojure.tools.trace$trace_var_STAR_$fn__329$tracing_wrapper__330@8dba70a"]}
+TRACE t7899: | (figwheel.main/build-opt # "dev")
+TRACE t7900: | | (figwheel.main/get-build-with-error "dev")
+TRACE t7901: | | | (figwheel.main/get-build "dev")
+TRACE t7902: | | | | (figwheel.main/load-edn-opts "dev.cljs.edn")
+TRACE t7903: | | | | | (figwheel.main/read-edn-opts "dev.cljs.edn")
+TRACE t7904: | | | | | | (figwheel.main/read-edn-file #object[java.io.File 0x2acacdf "dev.cljs.edn"])
+TRACE t7904: | | | | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7903: | | | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7905: | | | | | (figwheel.main/merge-meta # #)
+TRACE t7905: | | | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7902: | | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7906: | | | | (figwheel.main/validate-config! :figwheel.main.schema.config/edn # ...)
+TRACE t7907: | | | | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-config)
+TRACE t7908: | | | | | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-config ...)
+TRACE t7908: | | | | | | => nil
+TRACE t7907: | | | | | => nil
+TRACE t7906: | | | | => nil
+TRACE t7909: | | | | (figwheel.main/validate-config! :figwheel.main.schema.cljs-options/cljs-options # ...)
+TRACE t7910: | | | | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-config)
+TRACE t7911: | | | | | | (figwheel.main/get-edn-file-key "figwheel-main.edn" :validate-config ...)
+TRACE t7911: | | | | | | => nil
+TRACE t7910: | | | | | => nil
+TRACE t7909: | | | | => nil
+TRACE t7901: | | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7900: | | => {:main myapp.core, :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out", ...}
+TRACE t7899: | => {:options #, :figwheel.main/build #}
+TRACE t7912: | (figwheel.main/default-compile #'cljs.repl.figwheel/repl-env #)
+TRACE t7913: | | (figwheel.main/update-config #)
+TRACE t7914: | | | (figwheel.main/config-compile-is-build-once #)
+TRACE t7914: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7915: | | | (figwheel.main/config-figwheel-main-edn #)
+TRACE t7916: | | | | (figwheel.main/fetch-figwheel-main-edn #)
+TRACE t7916: | | | | => nil
+TRACE t7917: | | | | (figwheel.main/process-figwheel-main-edn nil)
+TRACE t7917: | | | | => nil
+TRACE t7915: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7918: | | | (figwheel.main/config-merge-current-build-conf #)
+TRACE t7919: | | | | (figwheel.main/process-main-config #)
+TRACE t7920: | | | | | (figwheel.main/resolve-ring-handler nil)
+TRACE t7921: | | | | | | (figwheel.main/resolve-fn-var "ring-handler" nil)
+TRACE t7921: | | | | | | => nil
+TRACE t7920: | | | | | => nil
+TRACE t7919: | | | | => {:watch-dirs #}
+TRACE t7922: | | | | (figwheel.main/extra-config-merge # nil)
+TRACE t7922: | | | | => {:watch-dirs #}
+TRACE t7918: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7923: | | | (figwheel.main/config-ansi-color-output! #)
+TRACE t7923: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7924: | | | (figwheel.main/config-set-log-level! #)
+TRACE t7924: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7925: | | | (figwheel.main/config-log-syntax-error-style! #)
+TRACE t7925: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7926: | | | (figwheel.main/config-repl-serve? #)
+TRACE t7926: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7927: | | | (figwheel.main/config-main-ns #)
+TRACE t7927: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7928: | | | (figwheel.main/config-main-source-path-on-classpath #)
+TRACE t7928: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7929: | | | (figwheel.main/config-update-watch-dirs #)
+TRACE t7929: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7930: | | | (figwheel.main/config-ensure-watch-dirs-on-classpath #)
+TRACE t7930: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7931: | | | (figwheel.main/config-figwheel-mode? #)
+TRACE t7932: | | | | (figwheel.main/figwheel-mode? #)
+TRACE t7932: | | | | => true
+TRACE t7931: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7933: | | | (figwheel.main/config-default-dirs #)
+TRACE t7933: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7934: | | | (figwheel.main/config-default-asset-path #)
+TRACE t7934: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7935: | | | (figwheel.main/config-default-aot-cache-false #)
+TRACE t7935: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7936: | | | (figwheel.main/config-pre-post-hooks #)
+TRACE t7936: | | | => {:options #, :figwheel.main/build #, :args #, ...}
+TRACE t7937: | | | (figwheel.main/config-repl-connect #)
+TRACE t7938: | | | | (figwheel.main/config-connect-url # #)
+TRACE t7939: | | | | | (figwheel.main/fill-connect-url-template "ws://[[config-hostname]]:[[server-port]]/figwheel-connect" "localhost" ...)
+TRACE t7939: | | | | | => "ws://localhost:9500/figwheel-connect"
+TRACE t7940: | | | | | (figwheel.main/add-to-query "ws://localhost:9500/figwheel-connect" #)
+TRACE t7940: | | | | | => "ws://localhost:9500/figwheel-connect?fwprocess=05620b&fwbuild=dev"
+TRACE t7938: | | | | => "ws://localhost:9500/figwheel-connect?fwprocess=05620b&fwbuild=dev"
+TRACE t7941: | | | | (figwheel.main/repl-connection? #)
+TRACE t7941: | | | | => true
+TRACE t7937: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7942: | | | (figwheel.main/config-cljs-devtools #)
+TRACE t7942: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7943: | | | (figwheel.main/config-open-file-command #)
+TRACE t7943: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7944: | | | (figwheel.main/config-watch-css #)
+TRACE t7944: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7945: | | | (figwheel.main/config-finalize-repl-options #)
+TRACE t7946: | | | | (figwheel.main/get-repl-options #)
+TRACE t7946: | | | | => {:output-dir "resources/public/js/out", :closure-defines #, :inits #, ...}
+TRACE t7947: | | | | (figwheel.main/get-repl-env-options #)
+TRACE t7948: | | | | | (figwheel.main/get-repl-options #)
+TRACE t7948: | | | | | => {:output-dir "resources/public/js/out", :closure-defines #, :inits #, ...}
+TRACE t7947: | | | | => {:connection-filter #object[figwheel.main$config_repl_connect$fn__7420 0x75a955bf "figwheel.main$config_repl_connect$fn__7420@75a955bf"], :output-to "resources/public/js/main.js", :output-dir "resources/public/js/out"}
+TRACE t7945: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7949: | | | (figwheel.main/config-extra-mains #)
+TRACE t7949: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7950: | | | (figwheel.main/config-build-inputs #)
+TRACE t7951: | | | | (figwheel.main/config->inputs # #)
+TRACE t7951: | | | | => ("src/cljs")
+TRACE t7950: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7952: | | | (figwheel.main/config-clean #)
+TRACE t7952: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7953: | | | (figwheel.main/config-warn-resource-directory-not-on-classpath #)
+TRACE t7953: | | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7913: | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7954: | | (figwheel.main/add-default-system-app-handler #)
+TRACE t7954: | | => {:args #, :figwheel.main/build #, :ns myapp.core, ...}
+TRACE t7955: | | (figwheel.repl/repl-env* #)
+TRACE t7955: | | => #figwheel.repl.FigwheelReplEnv{:output-dir "resources/public/js/out", :bound-printer #object[clojure.lang.Atom 0x2b7e739 #], :broadcast false, ...}
+TRACE t7956: | | (figwheel.main/validate-basic-assumptions! #)
+TRACE t7956: | | => nil
+TRACE t7957: | | (figwheel.main/validate-fix-target-classpath! #)
+TRACE t7957: | | => nil
+TRACE t7958: | | (figwheel.main/figwheel-mode? #)
+TRACE t7958: | | => true
+TRACE t7959: | | (figwheel.main/build # # ...)
+TRACE t7960: | | | (figwheel.main/build-cljs "dev" #object[cljs.build.api$inputs$reify__7066 0x515d6c9f "cljs.build.api$inputs$reify__7066@515d6c9f"] ...)
+TRACE t7961: | | | | (figwheel.main/run-hooks nil #)
+TRACE t7961: | | | | => nil
+[Figwheel] Compiling build dev to "resources/public/js/main.js"
+TRACE t12524: | | | | (figwheel.main/time-elapsed 1564301130100)
+TRACE t12524: | | | | => "39.501 seconds"
+[Figwheel] Successfully compiled build dev to "resources/public/js/main.js" in 39.501 seconds.
+TRACE t12525: | | | | (figwheel.main/run-hooks nil #)
+TRACE t12525: | | | | => nil
+TRACE t7960: | | | => nil
+TRACE t12526: | | | (figwheel.main/config->reload-config #)
+TRACE t12526: | | | => {}
+TRACE t12527: | | | (figwheel.main/watch-build "dev" # ...)
+[Figwheel] Watching paths: ("src/cljs") to compile build - dev
+TRACE t12527: | | | => {:watcher #, :watches #}
+TRACE t7959: | | => {:watcher #, :watches #}
+TRACE t12528: | | (figwheel.main/register-build! "dev" #)
+TRACE t12528: | | => {"dev" #}
+TRACE t12529: | | (figwheel.main/start-background-builds #)
+TRACE t12529: | | => nil
+TRACE t12530: | | (figwheel.main/repl-action #figwheel.repl.FigwheelReplEnv# #)
+TRACE t12531: | | | (figwheel.main/log-server-start #figwheel.repl.FigwheelReplEnv#)
+[Figwheel] Starting Server at http://localhost:9500
+TRACE t12531: | | | => nil
+[Figwheel] Starting REPL
+TRACE t12532: | | | (figwheel.main/start-file-logger)
+TRACE t12532: | | | => nil
+TRACE t12533: | | | (figwheel.main/repl #figwheel.repl.FigwheelReplEnv# #)
+Prompt will show when REPL connects to evaluation environment (i.e. a REPL hosting webpage)
+Figwheel Main Controls:
+          (figwheel.main/stop-builds id ...)  ;; stops Figwheel autobuilder for ids
+          (figwheel.main/start-builds id ...) ;; starts autobuilder focused on ids
+          (figwheel.main/reset)               ;; stops, cleans, reloads config, and starts autobuilder
+          (figwheel.main/build-once id ...)   ;; builds source one time
+          (figwheel.main/clean id ...)        ;; deletes compiled cljs target files
+          (figwheel.main/status)              ;; displays current state of system
+Figwheel REPL Controls:
+          (figwheel.repl/conns)               ;; displays the current connections
+          (figwheel.repl/focus session-name)  ;; choose which session name to focus on
+In the cljs.user ns, controls can be called without ns ie. (conns) instead of (figwheel.repl/conns)
+    Docs: (doc function-name-here)
+    Exit: :cljs/quit
+ Results: Stored in vars *1, *2, *3, *e holds last exception object
+TRACE t12534: | | | | (figwheel.main/in-nrepl?)
+TRACE t12535: | | | | | (figwheel.main/bound-var? nrepl.middleware.interruptible-eval/*msg*)
+TRACE t12535: | | | | | => nil
+TRACE t12536: | | | | | (figwheel.main/bound-var? clojure.tools.nrepl.middleware.interruptible-eval/*msg*)
+TRACE t12536: | | | | | => nil
+TRACE t12534: | | | | => nil
+TRACE t12537: | | | | (cljs.repl/repl* #figwheel.repl.FigwheelReplEnv# #)
+TRACE t12538: | | | | | (cljs.repl/read-source-map "cljs/core.aot.js")
+TRACE t12539: | | | | | (figwheel.repl/setup #figwheel.repl.FigwheelReplEnv# #)
+TRACE t12540: | | | | | | (figwheel.repl/run-default-server # #object[clojure.lang.Atom 0x29f4d42 #])
+TRACE t12541: | | | | | | | (figwheel.repl/run-default-server* # #object[clojure.lang.Atom 0x29f4d42 #])
+TRACE t12542: | | | | | | | | (figwheel.repl/asyc-http-polling-middleware #object[figwheel.repl$run_default_server_STAR_$fn__4062 0x1b65076 "figwheel.repl$run_default_server_STAR_$fn__4062@1b65076"] "/figwheel-connect" ...)
+TRACE t12542: | | | | | | | | => #object[figwheel.repl$asyc_http_polling_middleware$fn__4010 0x551a24f "figwheel.repl$asyc_http_polling_middleware$fn__4010@551a24f"]
+TRACE t12543: | | | | | | | | (figwheel.repl/abstract-websocket-connection #object[clojure.lang.Atom 0x29f4d42 #])
+TRACE t12543: | | | | | | | | => {:on-connect #object[figwheel.repl$abstract_websocket_connection$fn__3925 0x4b28e19b "figwheel.repl$abstract_websocket_connection$fn__3925@4b28e19b"], :on-close #object[figwheel.repl$abstract_websocket_connection$fn__3930 0x61ecfae6 "figwheel.repl$abstract_websocket_connection$fn__3930@61ecfae6"], :on-receive #object[figwheel.repl$abstract_websocket_connection$fn__3932 0x57ad1859 "figwheel.repl$abstract_websocket_connection$fn__3932@57ad1859"]}
+TRACE t12541: | | | | | | | => #object[org.eclipse.jetty.server.Server 0x3c9b9e92 "org.eclipse.jetty.server.Server@3c9b9e92"]
+TRACE t12540: | | | | | | => #object[org.eclipse.jetty.server.Server 0x3c9b9e92 "org.eclipse.jetty.server.Server@3c9b9e92"]
+TRACE t12544: | | | | | | (figwheel.repl/add-listener #object[clojure.core$bound_fn_STAR_$fn__5749 0x28964cb5 "clojure.core$bound_fn_STAR_$fn__5749@28964cb5"])
+TRACE t12545: | | | | | | | (figwheel.repl/add-listener #object[clojure.core$bound_fn_STAR_$fn__5749 0x28964cb5 "clojure.core$bound_fn_STAR_$fn__5749@28964cb5"] #object[clojure.core$bound_fn_STAR_$fn__5749 0x28964cb5 "clojure.core$bound_fn_STAR_$fn__5749@28964cb5"])
+TRACE t12545: | | | | | | | => nil
+TRACE t12544: | | | | | | => nil
+TRACE t12546: | | | | | | (figwheel.repl/fill-server-url-template "http://[[server-hostname]]:[[server-port]]" #)
+TRACE t12546: | | | | | | => "http://localhost:9500"
+Opening URL http://localhost:9500
+TRACE t12538: | | | | | => {25535 #, 37797 #, 11110 #, ...}
+TRACE t12597: (figwheel.repl/create-connection! {:port 9500, :headers {:sec-websocket-version "13", :sec-websocket-extensions "permessage-deflate", :user-agent "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0", :pragma "no-cache", :sec-websocket-key "eUeE1T4IRuNmVffCk8CMhw==", :upgrade "websocket", :cache-control "no-cache", :host "localhost:9500", :accept-encoding "gzip, deflate", :origin "http://localhost:9500", :connection "keep-alive, Upgrade", :accept-language "en-US,en;q=0.5", :accept "*/*"}, :host "localhost", :websocket? true, :origin "http://localhost:9500", :uri "/figwheel-connect", :query-string "fwprocess=05620b&fwbuild=dev&fwsid=8b9caa7e-325a-4f89-988e-0ece1c515297", :scheme "ws", :request-method :get} {:type :websocket, :is-open-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3802 0x46f78e0d "figwheel.server.jetty_websocket$websocket_connection_data$fn__3802@46f78e0d"], :close-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3800 0xf561b8e "figwheel.server.jetty_websocket$websocket_connection_data$fn__3800@f561b8e"], :send-fn #object[figwheel.repl$abstract_websocket_connection$fn__3925$fn__3927 0x77514814 "figwheel.repl$abstract_websocket_connection$fn__3925$fn__3927@77514814"]})
+TRACE t12598: | (figwheel.repl/negotiate-id {:port 9500, :headers {:sec-websocket-version "13", :sec-websocket-extensions "permessage-deflate", :user-agent "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0", :pragma "no-cache", :sec-websocket-key "eUeE1T4IRuNmVffCk8CMhw==", :upgrade "websocket", :cache-control "no-cache", :host "localhost:9500", :accept-encoding "gzip, deflate", :origin "http://localhost:9500", :connection "keep-alive, Upgrade", :accept-language "en-US,en;q=0.5", :accept "*/*"}, :host "localhost", :websocket? true, :origin "http://localhost:9500", :uri "/figwheel-connect", :query-string "fwprocess=05620b&fwbuild=dev&fwsid=8b9caa7e-325a-4f89-988e-0ece1c515297", :scheme "ws", :request-method :get} {})
+TRACE t12599: | | (figwheel.repl/parse-query-string "fwprocess=05620b&fwbuild=dev&fwsid=8b9caa7e-325a-4f89-988e-0ece1c515297")
+TRACE t12599: | | => {:fwprocess "05620b", :fwbuild "dev", :fwsid "8b9caa7e-325a-4f89-988e-0ece1c515297"}
+TRACE t12600: | | (figwheel.repl/available-names {})
+TRACE t12601: | | | (figwheel.repl/taken-names {})
+TRACE t12601: | | | => #{}
+TRACE t12600: | | => #{"Angila" "Selene" "Darin" "Cathy" "Iris" "Dominick" "Monroe" "Kenda" "Dirk" "Yan" "Brant" "Enrique" "Rolando" "Stephan" "Grayce" "Steven" "Kittie" "Janina" "Melodee" "Ciara" "Stevie" "Johnson" "Julietta" "Shawnda" "Rema" "Freeman" "Palmer" "Marvin" "Dee" "Porter" "Tana" "Roselle" "Vince" "Gigi" "Gilberto" "Jolie" "Eufemia" "Roselia" "Shawn" "Laveta" "Fred" "Quyen" "Daniel" "Emilio" "Eloy" "Lilliana" "Cecil" "Rosie" "Mac" "Elmo" "Elicia" "Krista" "Mable" "Tanner" "Jerrell" "Lucien" "Marcos" "Hong" "Bridget" "Lilian" "Russ" "Jeramy" "Kelle" "Rosy" "Carmelina" "Shamika" "Cory" "Miyoko" "Shelia" "Glenn" "Thu" "Bruno" "Kim" "Nicola" "Epifania" "Leeanne" "Odelia" "Vashti" "Dodie" "Marshall" "Eduardo" "Jazmin" "Yoshiko" "Jose" "Vanita" "Judson" "Boyce" "Tatiana" "Francisco" "Jerald" "Hilde" "Lorine" "Sal" "Abdul" "Janetta" "Doyle" "Nakesha" "Korey" "Marty"}
+TRACE t12598: | => ["8b9caa7e-325a-4f89-988e-0ece1c515297" "Ciara"]
+TRACE t12602: | (figwheel.repl/parse-query-string "fwprocess=05620b&fwbuild=dev&fwsid=8b9caa7e-325a-4f89-988e-0ece1c515297")
+TRACE t12602: | => {:fwprocess "05620b", :fwbuild "dev", :fwsid "8b9caa7e-325a-4f89-988e-0ece1c515297"}
+TRACE t12597: => {:close-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3800 0xf561b8e "figwheel.server.jetty_websocket$websocket_connection_data$fn__3800@f561b8e"], :session-id "8b9caa7e-325a-4f89-988e-0ece1c515297", :session-name "Ciara", :type :websocket, :is-open-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3802 0x46f78e0d "figwheel.server.jetty_websocket$websocket_connection_data$fn__3802@46f78e0d"], :send-fn #object[figwheel.repl$abstract_websocket_connection$fn__3925$fn__3927 0x77514814 "figwheel.repl$abstract_websocket_connection$fn__3925$fn__3927@77514814"], :uri "/figwheel-connect", :query {:fwprocess "05620b", :fwbuild "dev", :fwsid "8b9caa7e-325a-4f89-988e-0ece1c515297"}, :query-string "fwprocess=05620b&fwbuild=dev&fwsid=8b9caa7e-325a-4f89-988e-0ece1c515297", :created-at 1564301186478, :scheme "ws", :request-method :get, :figwheel.repl/alive-at 1564301186478}
+TRACE t12603: (figwheel.repl/naming-response {:close-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3800 0xf561b8e "figwheel.server.jetty_websocket$websocket_connection_data$fn__3800@f561b8e"], :session-id "8b9caa7e-325a-4f89-988e-0ece1c515297", :session-name "Ciara", :type :websocket, :is-open-fn #object[figwheel.server.jetty_websocket$websocket_connection_data$fn__3802 0x46f78e0d "figwheel.server.jetty_websocket$websocket_connection_data$fn__3802@46f78e0d"], :send-fn #object[figwheel.repl$abstract_websocket_connection$fn__3925$fn__3927 0x77514814 "figwheel.repl$abstract_websocket_connection$fn__3925$fn__3927@77514814"], :uri "/figwheel-connect", :query {:fwprocess "05620b", :fwbuild "dev", :fwsid "8b9caa7e-325a-4f89-988e-0ece1c515297"}, :query-string "fwprocess=05620b&fwbuild=dev&fwsid=8b9caa7e-325a-4f89-988e-0ece1c515297", :created-at 1564301186478, :scheme "ws", :request-method :get, :figwheel.repl/alive-at 1564301186478})
+TRACE t12603: => "{\"op\":\"naming\",\"session-name\":\"Ciara\",\"session-id\":\"8b9caa7e-325a-4f89-988e-0ece1c515297\",\"connection-type\":\"websocket\"}"
